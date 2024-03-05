@@ -1,1 +1,1 @@
-# diseasesurveillance.github.io
+Disease surveillance project

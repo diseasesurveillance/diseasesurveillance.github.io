@@ -1,0 +1,23 @@
+# EWS
+
+We are developing a disease surveillance system to forecast the future number of cases and the early detection of disease outbreaks.
+We are validating the system using dengue data from Brazil.
+
+### System components {-}
+
+- Data retrieval of official dengue data, search query data, population, climate and environmental covariates (download, clean and format data for analysis and visualization)
+- Nowcasting methods using digital, environmental and climate data. Data include temperature, precipitation, and Google trends using specific keywords related to dengue)
+- Forecasting methods using environmental and climate data (and ensemble of several methods)
+- Methods for monitoring dengue in one municipality, and extension to models that borrow information from neighboring regions
+- Methods performance by quantifying how well the methods predict future number of cases weeks or months in advance
+- Software system to be used to monitor dengue in Brazil, and adaptable to other diseases and countries
+
+
+### Forecasting methods {-}
+
+```{r, echo = FALSE, out.width = "600px"}
+knitr::include_graphics("img/denguebrazil-forecasts-movewindow.png")
+knitr::include_graphics("img/denguebrazil-realvsforecasts.jpg")
+```
+
+

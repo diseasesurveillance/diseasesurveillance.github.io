@@ -1,0 +1,8 @@
+# Dengue tracker
+
+
+Dengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation.
+In [Dengue-tracker](https://diseasesurveillance.github.io/dengue-tracker/index.html), we provide weekly updates on the number of official dengue cases per municipality in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers in understanding dengue levels and guide their decisions.
+
+
+> [**Click here to access Dengue-tracker**](https://diseasesurveillance.github.io/dengue-tracker/index.html)

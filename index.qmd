@@ -1,0 +1,32 @@
+# Welcome to the disease surveillance project! {-}
+
+ 
+
+We provide tools to national health organizations that allow them to make the best use of their data to improve the health and quality of life of their populations. Our work primarily focus on surveillance of climate-sensitive diseases such as dengue in Brazil and malaria in Africa.
+
+We develop innovative statistical and machine learning methods to help understand the geographical spread of diseases and forecast future cases. Our methods leverage multiple datasets from various sources, including temperature, precipitation, and socio-economic factors. Additionally, we use digital data sources to help determine disease levels in real-time.
+
+Our project aims to be a valuable resource for decision-makers seeking information on disease levels in various countries. We also provide researchers useful methods and software tools that they can utilize in their efforts to monitor diseases and guide decision-making in their own surveillance applications.
+
+<!--
+Climate impacts health
+Maps with slide showing before and after
+-->
+
+
+
+```{r}
+#| label: fig-stripes
+#| echo: false
+#| out-width: 100%
+#| fig-cap: |
+#|   [#ShowYourStripes](https://showyourstripes.info/).
+
+knitr::include_graphics("img/stripes1850-2022-MO.png")
+```
+
+<!--
+## References {-}
+
+[What is a zoonotic disease? (Wellcome)](https://wellcome.org/news/what-zoonotic-disease)
+-->

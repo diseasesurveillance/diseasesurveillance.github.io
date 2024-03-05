@@ -1,0 +1,12 @@
+# Nowcasting
+
+```{r, echo = FALSE, out.width = "600px"}
+knitr::include_graphics("img/nowcastingleobastos.png")
+```
+
+From @bastosetal19
+
+- Less than 50% cases are reported in one week
+- Less than 75% cases are reported in four weeks
+- Less than 90% cases are reported in nine weeks
+

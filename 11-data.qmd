@@ -1,0 +1,51 @@
+# Data
+
+## Official disease data
+
+Ministry and departments of health
+
+- Cases (number of individual cases reported)
+- Incidence (cases reported per 100,000 people)
+
+
+## Digital data sources
+
+Search query data, social media data
+
+- Google trends data (index from 0 to 100)
+
+## Population
+
+The [WorldPop Open Population Repository](https://wopr.worldpop.org/) provides access to gridded population estimates.
+
+
+## Climatic and environmental data
+
+For each of the covariates, review on how it affects dengue/malaria/other infectious disease and references.
+
+- Temperature
+
+Copernicus climate data store: https://cds.climate.copernicus.eu/ 
+
+The R Package [KrigR](https://github.com/ErikKusch/KrigR) allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF).
+The package interfaces with the [Climate Data Store (CDS)](https://cds.climate.copernicus.eu/#!/home) hosted by the Copernicus [Climate Change Service (C3S)](https://cds.climate.copernicus.eu/about-c3s) for retrieval of climate data.
+To use it, we need to create a CDS [API Key](https://cds.climate.copernicus.eu/api-how-to).
+
+- Precipitation
+- Humidity
+- El Niño/Southern Oscillation (ENSO) index
+- Historical and future data
+
+## Environment
+
+## Socio-economic
+
+## Covariates repositories
+
+
+<table>
+<tr><td>Variable</td><td>Spatial resolution</td><td>Temporal resolution</td><td>Source</td><td>Package</td></tr>
+</table>
+
+
+

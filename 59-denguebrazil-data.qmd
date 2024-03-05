@@ -1,0 +1,88 @@
+# Data
+
+## Map of Brazilian municipalities
+
+R package [**geobr**](https://cran.r-project.org/web/packages/geobr/vignettes/intro_to_geobr.html)
+
+
+```
+library(geobr)
+library(ggplot2)
+
+map <- read_municipality(year=2020, showProgress = FALSE)
+ggplot(map) + geom_sf()
+length(unique(map$code_muni)) # number of municipalities: 5570
+```
+
+
+
+## Dengue data
+
+[InfoDengue](https://info.dengue.mat.br/)
+
+[InfoDengue API](https://info.dengue.mat.br/services/tutorial/R)
+
+Dengue cases, nowcasts, temperature and humidity by city level and epidemiological week
+
+
+
+
+<!--
+In InfoDengue we receive the most up-to-date SINAN data from the Brazilian Ministry of Health and then we analyze some climate variables to evaluate the conditions for mosquito transmission, and we also run a nowcasting model to correct delays.
+-->
+
+```
+url <- "https://info.dengue.mat.br/api/alertcity?"
+geocode <- 3304557
+disease <- "dengue"
+format <- "csv"
+ew_start <- 1
+ew_end <- 52
+ey_start <- 2021
+ey_end <- 2021
+
+cons1 <- paste0(url,"geocode=",geocode,"&disease=",disease,"&format=",format,"&ew_start=",ew_start,"&ew_end=",ew_end,"&ey_start=",ey_start,"&ey_end=",ey_end)
+
+
+library(tidyverse)
+d <- read_csv(cons1, show_col_types=FALSE) %>% arrange(data_iniSE)
+glimpse(d)
+ggplot(d, aes(SE, casos)) + geom_line()
+```
+
+
+```{r, echo = FALSE, out.width = "600px"}
+knitr::include_graphics("img/denguebrazil-incidence.png")
+```
+
+Dengue incidence rate (cases per 100 000 residents per month) for ten Brazilian states (São Paulo and Minas Gerais from the southeast, Rio Grande do Sul and Santa Catarina from the south, Mato Grosso do Sul and Goias from the midwest, Ceará and Bahia from the northeast, Pará and Amazonas from the north). It is clear that the incidence rate is influenced by geographical and environmental factors, as described in @loweetal21
+
+## Google trends data
+
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("img/denguebrazil-googletrends.png")
+```
+
+Google trends dengue data. Values in a range of 0 to 100, where 100 represents the maximal value. Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest
+
+
+```{r, echo = FALSE, out.width = "60%", fig.align='center'}
+knitr::include_graphics("img/denguebrazil-corrofficialgoogle.png")
+
+```
+
+
+## Population
+
+## Climate
+
+- Temperature
+- Precipitation
+- Humidity
+- El Niño/Southern Oscillation (ENSO) index
+- Historical and future data
+
+## Environment
+
+## Socio-economic
