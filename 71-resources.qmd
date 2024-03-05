@@ -1,5 +1,6 @@
-# Materials
+# Resources
 
+````{=html}
 <!--
 ## Spatial Data Science with R
 
@@ -21,26 +22,19 @@ Press F to view full screen slides
 :::
 
 -->
-
+````
 
 ## Books on spatial data analysis and visualization
 
-<a href= "http://www.paulamoraga.com/book-spatial/" target='_blank'>
-Spatial Statistics for Data Science: Theory and Practice with R
-</a> <br>
-Moraga. Chapman & Hall/CRC Data Science Series (2023)
+<a href= "http://www.paulamoraga.com/book-spatial/" target='_blank'> Spatial Statistics for Data Science: Theory and Practice with R </a> <br> Moraga. Chapman & Hall/CRC Data Science Series (2023)
 
-<a href= "http://www.paulamoraga.com/book-geospatial/" target='_blank'>
-Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny
-</a> <br>
-Moraga. Chapman & Hall/CRC Biostatistics Series (2019)
+<a href= "http://www.paulamoraga.com/book-geospatial/" target='_blank'> Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny </a> <br> Moraga. Chapman & Hall/CRC Biostatistics Series (2019)
 
 ## Downloading climate and environmental data
 
 [KrigR: an R package to download data from ERA5 from ECMWF](https://github.com/ErikKusch/KrigR)
 
 [rspatialdata tutorials](https://rspatialdata.github.io/index.html)
-
 
 ## Interactive Visualizations
 
@@ -50,29 +44,7 @@ Moraga. Chapman & Hall/CRC Biostatistics Series (2019)
 
 [apexcharter](https://dreamrs.github.io/apexcharter/)
 
-
 ## Building Shiny web applications
 
 [Shiny](https://shiny.posit.co/)
-
-
-## Creating R Markdown documents
-
-[rstudio4edu](https://rstudio4edu.github.io/rstudio4edu-book/rmd-fancy.html)
-
-## GitHub Actions
-
-[GitHub Actions](https://rfortherestofus.com/2023/05/github-actions)
-
-
-## Other resources
-
-[Images](https://unsplash.com/)
-
-
-
-
-
-
-
 

@@ -79,9 +79,9 @@
   {
     "objectID": "52-denguebrazil-denguetracker.html",
     "href": "52-denguebrazil-denguetracker.html",
-    "title": "7  Dengue tracker",
+    "title": "\n7  Dengue tracker\n",
     "section": "",
-    "text": "Dengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation. In Dengue-tracker, we provide weekly updates on the number of official dengue cases per municipality in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers in understanding dengue levels and guide their decisions.\n\nClick here to access Dengue-tracker"
+    "text": "Dengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation. In Dengue-tracker, we provide weekly updates on the number of official dengue cases per municipality in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers in understanding dengue levels and guide their decisions.\n\nClick here to access Dengue-tracker\n\n\n\n\n\nFigure 7.1: Dengue-tracker"
   },
   {
     "objectID": "53-denguebrazil-ews.html",
@@ -140,81 +140,32 @@
     "text": "9.7 Socio-economic\n\n\n\n\nLowe, Rachel, Sophie A Lee, Kathleen M O’Reilly, Oliver J Brady, Leonardo Bastos, Gabriel Carrasco-Escobar, Rafael de Castro Catão, et al. 2021. “Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study.” The Lancet Planetary Health. https://doi.org/10.1016/S2542-5196(20)30292-8."
   },
   {
-    "objectID": "71-training.html#books-on-spatial-data-analysis-and-visualization",
-    "href": "71-training.html#books-on-spatial-data-analysis-and-visualization",
-    "title": "10  Materials",
+    "objectID": "71-resources.html#books-on-spatial-data-analysis-and-visualization",
+    "href": "71-resources.html#books-on-spatial-data-analysis-and-visualization",
+    "title": "10  Resources",
     "section": "10.1 Books on spatial data analysis and visualization",
     "text": "10.1 Books on spatial data analysis and visualization\n Spatial Statistics for Data Science: Theory and Practice with R   Moraga. Chapman & Hall/CRC Data Science Series (2023)\n Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny   Moraga. Chapman & Hall/CRC Biostatistics Series (2019)"
   },
   {
-    "objectID": "71-training.html#downloading-climate-and-environmental-data",
-    "href": "71-training.html#downloading-climate-and-environmental-data",
-    "title": "10  Materials",
+    "objectID": "71-resources.html#downloading-climate-and-environmental-data",
+    "href": "71-resources.html#downloading-climate-and-environmental-data",
+    "title": "10  Resources",
     "section": "10.2 Downloading climate and environmental data",
     "text": "10.2 Downloading climate and environmental data\nKrigR: an R package to download data from ERA5 from ECMWF\nrspatialdata tutorials"
   },
   {
-    "objectID": "71-training.html#interactive-visualizations",
-    "href": "71-training.html#interactive-visualizations",
-    "title": "10  Materials",
+    "objectID": "71-resources.html#interactive-visualizations",
+    "href": "71-resources.html#interactive-visualizations",
+    "title": "10  Resources",
     "section": "10.3 Interactive Visualizations",
     "text": "10.3 Interactive Visualizations\nhtmlwidgets for R\nleaflet\napexcharter"
   },
   {
-    "objectID": "71-training.html#building-shiny-web-applications",
-    "href": "71-training.html#building-shiny-web-applications",
-    "title": "10  Materials",
+    "objectID": "71-resources.html#building-shiny-web-applications",
+    "href": "71-resources.html#building-shiny-web-applications",
+    "title": "10  Resources",
     "section": "10.4 Building Shiny web applications",
     "text": "10.4 Building Shiny web applications\nShiny"
-  },
-  {
-    "objectID": "71-training.html#creating-r-markdown-documents",
-    "href": "71-training.html#creating-r-markdown-documents",
-    "title": "10  Materials",
-    "section": "10.5 Creating R Markdown documents",
-    "text": "10.5 Creating R Markdown documents\nrstudio4edu"
-  },
-  {
-    "objectID": "71-training.html#github-actions",
-    "href": "71-training.html#github-actions",
-    "title": "10  Materials",
-    "section": "10.6 GitHub Actions",
-    "text": "10.6 GitHub Actions\nGitHub Actions"
-  },
-  {
-    "objectID": "71-training.html#other-resources",
-    "href": "71-training.html#other-resources",
-    "title": "10  Materials",
-    "section": "10.7 Other resources",
-    "text": "10.7 Other resources\nImages"
-  },
-  {
-    "objectID": "81-resources.html#disease-mapping",
-    "href": "81-resources.html#disease-mapping",
-    "title": "\n11  Publications\n",
-    "section": "\n11.1 Disease mapping",
-    "text": "11.1 Disease mapping\n Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny Moraga. Chapman & Hall/CRC Biostatistics Series (2019)  Small Area Disease Risk Estimation and Visualization Using R Moraga. The R Journal (2018)"
-  },
-  {
-    "objectID": "81-resources.html#nowcasting",
-    "href": "81-resources.html#nowcasting",
-    "title": "\n11  Publications\n",
-    "section": "\n11.2 Nowcasting",
-    "text": "11.2 Nowcasting\n A modelling approach for correcting reporting delays in disease surveillance data Bastos et al. Statistics in Medicine (2019)"
-  },
-  {
-    "objectID": "81-resources.html#forecasting",
-    "href": "81-resources.html#forecasting",
-    "title": "\n11  Publications\n",
-    "section": "\n11.3 Forecasting",
-    "text": "11.3 Forecasting\n Bayesian spatio-temporal model with INLA for dengue fever risk prediction in Costa Rica Chou-Chen et al. Environmental and Ecological Statistics (2023)  Deep learning models for forecasting dengue fever based on climate data in Vietnam Nguyen et al. PLOS Neglected Tropical Diseases (2022)  Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study Lowe et al. The Lancet Planetary Health (2021)  Accurate estimation of influenza epidemics using Google search data via ARGO Yang et al. Proceedings of the National Academy of Sciences (2015)  Advances in using Internet searches to track dengue Yang et al. PLOS Computational Biology (2017)"
-  },
-  {
-    "objectID": "81-resources.html#digital-data-sources",
-    "href": "81-resources.html#digital-data-sources",
-    "title": "\n11  Publications\n",
-    "section": "\n11.4 Digital data sources",
-    "text": "11.4 Digital data sources\n Predicting dengue incidence leveraging internet-based data sources. A case study in 20 cities in Brazil Koplewitz et al. PLOS Neglected Tropical Diseases (2022)  Using heterogeneous data to identify signatures of dengue outbreaks at fine spatio-temporal scales across Brazil Castro et al. PLOS Neglected Tropical Diseases (2021)  Google Health Trends performance reflecting dengue incidence for the Brazilian states Romero-Alvarez et al. BMC Infectious Diseases (2020)  Where did I get dengue? Detecting spatial clusters of infection risk with social network data Souza et al. Spatial and Spatio-temporal Epidemiology (2019)  Where did I get dengue? Detecting spatial clusters of infection risk with social network data Souza et al. Spatial and Spatio-temporal Epidemiology (2019)  Identifying High-Risk Areas for Dengue Infection Using Mobility Patterns on Twitter Souza et al. Online Journal of Public Health Informatics (2019)"
   },
   {
     "objectID": "references.html",

@@ -29,10 +29,7 @@ book:
         - 59-denguebrazil-data.qmd
     - part: "Training"
       chapters:  
-        - 71-training.qmd
-    - part: "Resources"
-      chapters:         
-        - 81-resources.qmd
+        - 71-resources.qmd
     - references.qmd
 
 bibliography: [bibliography-digitaldatasources.bib, bibliography-diseasemapping.bib, bibliography-forecasting.bib, bibliography-nowcasting.bib]
