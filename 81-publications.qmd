@@ -25,7 +25,6 @@ return(a)
 }
 ```
 
-
 ## Disease mapping
 
 ```{r, echo = FALSE, results='asis'}
@@ -53,5 +52,3 @@ cat(sapply(mybib, FUN = fnFormatBibliography))
 mybib <- RefManageR::ReadBib("bibliography-digitaldatasources.bib", check = FALSE) 
 cat(sapply(mybib, FUN = fnFormatBibliography))
 ```
-
-
