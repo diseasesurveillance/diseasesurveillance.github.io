@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Disease Surveillance",
     "section": "",
-    "text": "Welcome to the disease surveillance project!\nWe provide tools to national health organizations that allow them to make the best use of their data to improve the health and quality of life of their populations. Our work primarily focus on surveillance of climate-sensitive diseases such as dengue in Brazil and malaria in Africa.\nWe develop innovative statistical and machine learning methods to help understand the geographical spread of diseases and forecast future cases. Our methods leverage multiple datasets from various sources, including temperature, precipitation, and socio-economic factors. Additionally, we use digital data sources to help determine disease levels in real-time.\nOur project aims to be a valuable resource for decision-makers seeking information on disease levels in various countries. We also provide researchers useful methods and software tools that they can utilize in their efforts to monitor diseases and guide decision-making in their own surveillance applications.\n\n\n\n\n\nFigure 1: #ShowYourStripes."
+    "text": "Welcome to the disease surveillance project!\nWe provide tools to national health organizations that allow them to make the best use of their data to improve the health and quality of life of their populations. Our work primarily focus on surveillance of climate-sensitive diseases such as dengue in Brazil and malaria in Africa.\nWe develop innovative statistical and machine learning methods to help understand the geographical spread of diseases and forecast future cases. Our methods leverage multiple datasets from various sources, including temperature, precipitation, and socio-economic factors. Additionally, we use digital data sources to help determine disease levels in real-time.\nOur project aims to be a valuable resource for decision-makers and the general public seeking information on disease levels in various countries. We also provide researchers useful methods and software tools that they can utilize in their efforts to monitor diseases and guide decision-making in their own surveillance applications.\n\n\n\n\n\nFigure 1: #ShowYourStripes."
   },
   {
     "objectID": "01-people.html",
@@ -18,7 +18,7 @@
     "href": "11-data.html#official-disease-data",
     "title": "1  Data",
     "section": "1.1 Official disease data",
-    "text": "1.1 Official disease data\nMinistry and departments of health\n\nCases (number of individual cases reported)\nIncidence (cases reported per 100,000 people)"
+    "text": "1.1 Official disease data\nMinistries and departments of health\n\nCases (number of individual cases reported)"
   },
   {
     "objectID": "11-data.html#digital-data-sources",
@@ -39,7 +39,7 @@
     "href": "11-data.html#climatic-and-environmental-data",
     "title": "1  Data",
     "section": "1.4 Climatic and environmental data",
-    "text": "1.4 Climatic and environmental data\nFor each of the covariates, review on how it affects dengue/malaria/other infectious disease and references.\n\nTemperature\n\nCopernicus climate data store: https://cds.climate.copernicus.eu/\nThe R Package KrigR allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF). The package interfaces with the Climate Data Store (CDS) hosted by the Copernicus Climate Change Service (C3S) for retrieval of climate data. To use it, we need to create a CDS API Key.\n\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data"
+    "text": "1.4 Climatic and environmental data\nFor each of the covariates, review on how it affects dengue/malaria/other infectious disease and references.\n\nTemperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data\n\nCopernicus climate data store\nThe R Package KrigR allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF). The package interfaces with the Climate Data Store (CDS) hosted by the Copernicus Climate Change Service (C3S) for retrieval of climate data. To use it, we need to create a CDS API Key.\nThe R package ag5Tools allows us to download and extract data from the “Agrometeorological indicators from 1979 to present and a spatial resolution of 0.1\\(^o \\times\\) 0.1\\(^o\\) (approximately 11 km \\(\\times\\) 11 km at the equator) derived from reanalysis” dataset (AgERA5)."
   },
   {
     "objectID": "11-data.html#environment",
@@ -60,7 +60,7 @@
     "href": "11-data.html#covariates-repositories",
     "title": "1  Data",
     "section": "1.7 Covariates repositories",
-    "text": "1.7 Covariates repositories\n\n\n\n\nVariable\n\n\nSpatial resolution\n\n\nTemporal resolution\n\n\nSource\n\n\nPackage"
+    "text": "1.7 Covariates repositories\n\n\n\n\n\n\n\n\n\n\n\nVariable\nSpatial resolution\nTemporal resolution\nTime period\nSource\nPackage\n\n\nTemperature\n\n\n1979-present and future?\n\n\n\n\nPrecipitation\n\n\n\n\n\n\n\nHumidity\n\n\n\n\n\n\n\nEl Niño/Southern Oscillation (ENSO)"
   },
   {
     "objectID": "22-nowcasting.html",
@@ -81,7 +81,7 @@
     "href": "52-denguebrazil-denguetracker.html",
     "title": "\n7  Dengue tracker\n",
     "section": "",
-    "text": "Dengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation. In Dengue-tracker, we provide weekly updates on the number of official dengue cases per municipality in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers in understanding dengue levels and guide their decisions.\n\nClick here to access Dengue-tracker\n\n\n\n\n\nFigure 7.1: Dengue-tracker"
+    "text": "Dengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation. In Dengue-tracker, we provide weekly updates on the number of official dengue cases per state in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers and the general public in understanding dengue levels and guide their decisions.\n\nClick here to access Dengue-tracker\n\n\n\n\n\nFigure 7.1: Dengue-tracker"
   },
   {
     "objectID": "53-denguebrazil-ews.html",
@@ -91,11 +91,11 @@
     "text": "We are developing a disease surveillance system to forecast the future number of cases and the early detection of disease outbreaks. We are validating the system using dengue data from Brazil.\nSystem components\n\nData retrieval of official dengue data, search query data, population, climate and environmental covariates (download, clean and format data for analysis and visualization)\nNowcasting methods using digital, environmental and climate data. Data include temperature, precipitation, and Google trends using specific keywords related to dengue)\nForecasting methods using environmental and climate data (and ensemble of several methods)\nMethods for monitoring dengue in one municipality, and extension to models that borrow information from neighboring regions\nMethods performance by quantifying how well the methods predict future number of cases weeks or months in advance\nSoftware system to be used to monitor dengue in Brazil, and adaptable to other diseases and countries\nForecasting methods"
   },
   {
-    "objectID": "59-denguebrazil-data.html#map-of-brazilian-municipalities",
-    "href": "59-denguebrazil-data.html#map-of-brazilian-municipalities",
+    "objectID": "59-denguebrazil-data.html#map-of-brazilian-regions",
+    "href": "59-denguebrazil-data.html#map-of-brazilian-regions",
     "title": "\n9  Data\n",
-    "section": "\n9.1 Map of Brazilian municipalities",
-    "text": "9.1 Map of Brazilian municipalities\nR package geobr\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_municipality(year=2020, showProgress = FALSE)\nggplot(map) + geom_sf()\nlength(unique(map$code_muni)) # number of municipalities: 5570"
+    "section": "\n9.1 Map of Brazilian regions",
+    "text": "9.1 Map of Brazilian regions\nR package geobr\n\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_state(year = 2020, showProgress = FALSE)\n# length(unique(map$code_state)) # number of states: 27\nggplot(map) + geom_sf() + labs(title = \"States\")\n\n\n\nmap &lt;- read_micro_region(year = 2020, showProgress = FALSE)\n# length(unique(map$code_micro)) # number of microregions: 558\nggplot(map) + geom_sf() + labs(title = \"Microregions\")\n\n\n\n\n\nmap &lt;- read_municipality(year = 2020, showProgress = FALSE)\n# length(unique(map$code_muni)) # number of municipalities: 5570\nggplot(map) + geom_sf() + labs(title = \"Municipalities\")"
   },
   {
     "objectID": "59-denguebrazil-data.html#dengue-data",

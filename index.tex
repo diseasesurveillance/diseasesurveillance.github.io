@@ -52,6 +52,46 @@
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -177,7 +217,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, interior hidden, enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, breakable, frame hidden, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -209,11 +249,11 @@ including temperature, precipitation, and socio-economic factors.
 Additionally, we use digital data sources to help determine disease
 levels in real-time.
 
-Our project aims to be a valuable resource for decision-makers seeking
-information on disease levels in various countries. We also provide
-researchers useful methods and software tools that they can utilize in
-their efforts to monitor diseases and guide decision-making in their own
-surveillance applications.
+Our project aims to be a valuable resource for decision-makers and the
+general public seeking information on disease levels in various
+countries. We also provide researchers useful methods and software tools
+that they can utilize in their efforts to monitor diseases and guide
+decision-making in their own surveillance applications.
 
 \begin{figure}
 
@@ -271,14 +311,12 @@ Luis Barboza University of Costa Rica
 \hypertarget{official-disease-data}{%
 \section{Official disease data}\label{official-disease-data}}
 
-Ministry and departments of health
+Ministries and departments of health
 
 \begin{itemize}
 \tightlist
 \item
   Cases (number of individual cases reported)
-\item
-  Incidence (cases reported per 100,000 people)
 \end{itemize}
 
 \hypertarget{digital-data-sources}{%
@@ -309,9 +347,17 @@ dengue/malaria/other infectious disease and references.
 \tightlist
 \item
   Temperature
+\item
+  Precipitation
+\item
+  Humidity
+\item
+  El Niño/Southern Oscillation (ENSO) index
+\item
+  Historical and future data
 \end{itemize}
 
-Copernicus climate data store: https://cds.climate.copernicus.eu/
+\href{https://cds.climate.copernicus.eu/}{Copernicus climate data store}
 
 The R Package \href{https://github.com/ErikKusch/KrigR}{KrigR} allows us
 to download, preprocess, and downscale data from the European Centre for
@@ -325,17 +371,12 @@ Service (C3S)} for retrieval of climate data. To use it, we need to
 create a CDS \href{https://cds.climate.copernicus.eu/api-how-to}{API
 Key}.
 
-\begin{itemize}
-\tightlist
-\item
-  Precipitation
-\item
-  Humidity
-\item
-  El Niño/Southern Oscillation (ENSO) index
-\item
-  Historical and future data
-\end{itemize}
+The R package \href{https://agrdatasci.github.io/ag5Tools/}{ag5Tools}
+allows us to download and extract data from the ``Agrometeorological
+indicators from 1979 to present and a spatial resolution of
+0.1\(^o \times\) 0.1\(^o\) (approximately 11 km \(\times\) 11 km at the
+equator) derived from reanalysis'' dataset
+(\href{https://cds.climate.copernicus.eu/cdsapp\#!/dataset/10.24381/cds.6c68c9bb?tab=overview}{AgERA5}).
 
 \hypertarget{environment}{%
 \section{Environment}\label{environment}}
@@ -346,15 +387,24 @@ Key}.
 \hypertarget{covariates-repositories}{%
 \section{Covariates repositories}\label{covariates-repositories}}
 
-Variable
-
-Spatial resolution
-
-Temporal resolution
-
-Source
-
-Package
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1316}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2632}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2763}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1053}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1053}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1184}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Variable & Spatial resolution & Temporal resolution & Time period &
+Source & Package \\
+Temperature & & & 1979-present and future? & & \\
+Precipitation & & & & & \\
+Humidity & & & & & \\
+El Niño/Southern Oscillation (ENSO) & & & & & \\
+\end{longtable}
 
 \part{Surveillance methods}
 
@@ -450,13 +500,23 @@ decision-making and resource allocation. In
 we provide weekly updates on the number of official dengue cases per
 municipality in Brazil. Additionally, we present corrected case counts
 incorporating information from Google trends. We believe these reports
-will assist policymakers in understanding dengue levels and guide their
-decisions.
+will assist policymakers and the general public in understanding dengue
+levels and guide their decisions.
 
 \begin{quote}
 \href{https://diseasesurveillance.github.io/dengue-tracker/index.html}{\textbf{Click
 here to access Dengue-tracker}}
 \end{quote}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\textwidth,height=\textheight]{img/denguetracker.png}
+
+}
+
+\caption{\label{fig-denguetracker}\href{https://diseasesurveillance.github.io/dengue-tracker/index.html}{Dengue-tracker}}
+
+\end{figure}
 
 \hypertarget{ews}{%
 \chapter{EWS}\label{ews}}
@@ -511,14 +571,48 @@ municipalities}\label{map-of-brazilian-municipalities}}
 R package
 \href{https://cran.r-project.org/web/packages/geobr/vignettes/intro_to_geobr.html}{\textbf{geobr}}
 
-\begin{verbatim}
-library(geobr)
-library(ggplot2)
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(geobr)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
 
-map <- read_municipality(year=2020, showProgress = FALSE)
-ggplot(map) + geom_sf()
-length(unique(map$code_muni)) # number of municipalities: 5570
-\end{verbatim}
+\NormalTok{map }\OtherTok{\textless{}{-}} \FunctionTok{read\_state}\NormalTok{(}\AttributeTok{year =} \DecValTok{2020}\NormalTok{, }\AttributeTok{showProgress =} \ConstantTok{FALSE}\NormalTok{)}
+\CommentTok{\# length(unique(map$code\_state)) \# number of states: 27}
+\FunctionTok{ggplot}\NormalTok{(map) }\SpecialCharTok{+} \FunctionTok{geom\_sf}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"States"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{59-denguebrazil-data_files/figure-pdf/unnamed-chunk-1-1.pdf}
+
+}
+
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{map }\OtherTok{\textless{}{-}} \FunctionTok{read\_micro\_region}\NormalTok{(}\AttributeTok{year =} \DecValTok{2020}\NormalTok{, }\AttributeTok{showProgress =} \ConstantTok{FALSE}\NormalTok{)}
+\CommentTok{\# length(unique(map$code\_micro)) \# number of microregions: 558}
+\FunctionTok{ggplot}\NormalTok{(map) }\SpecialCharTok{+} \FunctionTok{geom\_sf}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Microregions"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{59-denguebrazil-data_files/figure-pdf/unnamed-chunk-1-2.pdf}
+
+}
+
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{map }\OtherTok{\textless{}{-}} \FunctionTok{read\_municipality}\NormalTok{(}\AttributeTok{year =} \DecValTok{2020}\NormalTok{, }\AttributeTok{showProgress =} \ConstantTok{FALSE}\NormalTok{)}
+\CommentTok{\# length(unique(map$code\_muni)) \# number of municipalities: 5570}
+\FunctionTok{ggplot}\NormalTok{(map) }\SpecialCharTok{+} \FunctionTok{geom\_sf}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Municipalities"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{dengue-data}{%
 \section{Dengue data}\label{dengue-data}}
@@ -606,8 +700,8 @@ always be ranked highest
 
 \part{Training}
 
-\hypertarget{materials}{%
-\chapter{Materials}\label{materials}}
+\hypertarget{resources}{%
+\chapter{Resources}\label{resources}}
 
 \hypertarget{books-on-spatial-data-analysis-and-visualization}{%
 \section{Books on spatial data analysis and
@@ -642,75 +736,6 @@ download data from ERA5 from ECMWF}
 applications}\label{building-shiny-web-applications}}
 
 \href{https://shiny.posit.co/}{Shiny}
-
-\hypertarget{creating-r-markdown-documents}{%
-\section{Creating R Markdown
-documents}\label{creating-r-markdown-documents}}
-
-\href{https://rstudio4edu.github.io/rstudio4edu-book/rmd-fancy.html}{rstudio4edu}
-
-\hypertarget{github-actions}{%
-\section{GitHub Actions}\label{github-actions}}
-
-\href{https://rfortherestofus.com/2023/05/github-actions}{GitHub
-Actions}
-
-\hypertarget{other-resources}{%
-\section{Other resources}\label{other-resources}}
-
-\href{https://unsplash.com/}{Images}
-
-\part{Resources}
-
-\hypertarget{publications}{%
-\chapter{Publications}\label{publications}}
-
-\hypertarget{disease-mapping-1}{%
-\section{Disease mapping}\label{disease-mapping-1}}
-
-Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny
-Moraga. Chapman \& Hall/CRC Biostatistics Series (2019) Small Area
-Disease Risk Estimation and Visualization Using R Moraga. The R Journal
-(2018)
-
-\hypertarget{nowcasting-1}{%
-\section{Nowcasting}\label{nowcasting-1}}
-
-A modelling approach for correcting reporting delays in disease
-surveillance data Bastos et al.~Statistics in Medicine (2019)
-
-\hypertarget{forecasting-1}{%
-\section{Forecasting}\label{forecasting-1}}
-
-Bayesian spatio-temporal model with INLA for dengue fever risk
-prediction in Costa Rica Chou-Chen et al.~Environmental and Ecological
-Statistics (2023) Deep learning models for forecasting dengue fever
-based on climate data in Vietnam Nguyen et al.~PLOS Neglected Tropical
-Diseases (2022) Combined effects of hydrometeorological hazards and
-urbanisation on dengue risk in Brazil: a spatiotemporal modelling study
-Lowe et al.~The Lancet Planetary Health (2021) Accurate estimation of
-influenza epidemics using Google search data via ARGO Yang et
-al.~Proceedings of the National Academy of Sciences (2015) Advances in
-using Internet searches to track dengue Yang et al.~PLOS Computational
-Biology (2017)
-
-\hypertarget{digital-data-sources-1}{%
-\section{Digital data sources}\label{digital-data-sources-1}}
-
-Predicting dengue incidence leveraging internet-based data sources. A
-case study in 20 cities in Brazil Koplewitz et al.~PLOS Neglected
-Tropical Diseases (2022) Using heterogeneous data to identify signatures
-of dengue outbreaks at fine spatio-temporal scales across Brazil Castro
-et al.~PLOS Neglected Tropical Diseases (2021) Google Health Trends
-performance reflecting dengue incidence for the Brazilian states
-Romero-Alvarez et al.~BMC Infectious Diseases (2020) Where did I get
-dengue? Detecting spatial clusters of infection risk with social network
-data Souza et al.~Spatial and Spatio-temporal Epidemiology (2019) Where
-did I get dengue? Detecting spatial clusters of infection risk with
-social network data Souza et al.~Spatial and Spatio-temporal
-Epidemiology (2019) Identifying High-Risk Areas for Dengue Infection
-Using Mobility Patterns on Twitter Souza et al.~Online Journal of Public
-Health Informatics (2019)
 
 \bookmarksetup{startatroot}
 

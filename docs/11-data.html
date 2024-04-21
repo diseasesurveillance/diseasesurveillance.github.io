@@ -62,6 +62,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -274,10 +276,9 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="official-disease-data" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="official-disease-data"><span class="header-section-number">1.1</span> Official disease data</h2>
-<p>Ministry and departments of health</p>
+<p>Ministries and departments of health</p>
 <ul>
 <li>Cases (number of individual cases reported)</li>
-<li>Incidence (cases reported per 100,000 people)</li>
 </ul>
 </section>
 <section id="digital-data-sources" class="level2" data-number="1.2">
@@ -296,15 +297,14 @@ ul.task-list li input[type="checkbox"] {
 <p>For each of the covariates, review on how it affects dengue/malaria/other infectious disease and references.</p>
 <ul>
 <li>Temperature</li>
-</ul>
-<p>Copernicus climate data store: https://cds.climate.copernicus.eu/</p>
-<p>The R Package <a href="https://github.com/ErikKusch/KrigR">KrigR</a> allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF). The package interfaces with the <a href="https://cds.climate.copernicus.eu/#!/home">Climate Data Store (CDS)</a> hosted by the Copernicus <a href="https://cds.climate.copernicus.eu/about-c3s">Climate Change Service (C3S)</a> for retrieval of climate data. To use it, we need to create a CDS <a href="https://cds.climate.copernicus.eu/api-how-to">API Key</a>.</p>
-<ul>
 <li>Precipitation</li>
 <li>Humidity</li>
 <li>El Niño/Southern Oscillation (ENSO) index</li>
 <li>Historical and future data</li>
 </ul>
+<p><a href="https://cds.climate.copernicus.eu/">Copernicus climate data store</a></p>
+<p>The R Package <a href="https://github.com/ErikKusch/KrigR">KrigR</a> allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF). The package interfaces with the <a href="https://cds.climate.copernicus.eu/#!/home">Climate Data Store (CDS)</a> hosted by the Copernicus <a href="https://cds.climate.copernicus.eu/about-c3s">Climate Change Service (C3S)</a> for retrieval of climate data. To use it, we need to create a CDS <a href="https://cds.climate.copernicus.eu/api-how-to">API Key</a>.</p>
+<p>The R package <a href="https://agrdatasci.github.io/ag5Tools/">ag5Tools</a> allows us to download and extract data from the “Agrometeorological indicators from 1979 to present and a spatial resolution of 0.1<span class="math inline">\(^o \times\)</span> 0.1<span class="math inline">\(^o\)</span> (approximately 11 km <span class="math inline">\(\times\)</span> 11 km at the equator) derived from reanalysis” dataset (<a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/10.24381/cds.6c68c9bb?tab=overview">AgERA5</a>).</p>
 </section>
 <section id="environment" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="environment"><span class="header-section-number">1.5</span> Environment</h2>
@@ -314,27 +314,58 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="covariates-repositories" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="covariates-repositories"><span class="header-section-number">1.7</span> Covariates repositories</h2>
-
-<table>
-<tbody><tr>
-<td>
-Variable
-</td>
-<td>
-Spatial resolution
-</td>
-<td>
-Temporal resolution
-</td>
-<td>
-Source
-</td>
-<td>
-Package
-</td>
+<table class="table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 26%">
+<col style="width: 27%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 11%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Variable</td>
+<td>Spatial resolution</td>
+<td>Temporal resolution</td>
+<td>Time period</td>
+<td>Source</td>
+<td>Package</td>
 </tr>
-
-</tbody></table>
+<tr class="even">
+<td>Temperature</td>
+<td></td>
+<td></td>
+<td>1979-present and future?</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Precipitation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Humidity</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>El Niño/Southern Oscillation (ENSO)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
