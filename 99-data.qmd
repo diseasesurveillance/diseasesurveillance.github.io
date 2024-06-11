@@ -1,0 +1,48 @@
+# Data
+
+## Official disease data
+
+Ministries and departments of health
+
+-   Cases (number of individual cases reported)
+
+## Population
+
+The [WorldPop Open Population Repository](https://wopr.worldpop.org/) provides access to gridded population estimates.
+
+## Digital data sources
+
+Search query data, social media data
+
+-   Google trends data (index from 0 to 100)
+
+## Climatic and environmental data
+
+For each of the covariates, review on how it affects dengue/malaria/other infectious disease and references.
+
+-   Temperature
+-   Precipitation
+-   Humidity
+-   El Niño/Southern Oscillation (ENSO) index
+-   Historical and future data
+
+[Copernicus climate data store](https://cds.climate.copernicus.eu/)
+
+The R Package [KrigR](https://github.com/ErikKusch/KrigR) allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF). The package interfaces with the [Climate Data Store (CDS)](https://cds.climate.copernicus.eu/#!/home) hosted by the Copernicus [Climate Change Service (C3S)](https://cds.climate.copernicus.eu/about-c3s) for retrieval of climate data. To use it, we need to create a CDS [API Key](https://cds.climate.copernicus.eu/api-how-to).
+
+The R package [ag5Tools](https://agrdatasci.github.io/ag5Tools/) allows us to download and extract data from the "Agrometeorological indicators from 1979 to present and a spatial resolution of 0.1$^o \times$ 0.1$^o$ (approximately 11 km $\times$ 11 km at the equator) derived from reanalysis" dataset ([AgERA5](https://cds.climate.copernicus.eu/cdsapp#!/dataset/10.24381/cds.6c68c9bb?tab=overview)).
+
+
+## Environment
+
+## Socio-economic
+
+## Covariates repositories
+
+|          |                    |                     |        |         |        |
+|----------|--------------------|---------------------|--------|--------|---------|
+| Variable | Spatial resolution | Temporal resolution | Time period | Source | Package |
+|Temperature | | | 1979-present and future?| | |
+|Precipitation | | | | | |
+|Humidity | | | | | |
+|El Niño/Southern Oscillation (ENSO) | | | | | |

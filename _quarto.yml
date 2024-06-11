@@ -1,45 +1,47 @@
 project:
-  type: book
+  type: website
   output-dir: "docs"
-
-book:
+  
+website:
   title: "Disease Surveillance"
   page-footer:
-    center: |
-      "Disease surveillance" was written by the GeoHealth research group, KAUST.
-  chapters:
-    - index.qmd
-    - 01-people.qmd
-    - part: "Data"
-      chapters: 
-        - 11-data.qmd
-    - part: "Surveillance methods"
-      chapters:         
-        - 21-diseasemapping.qmd
+    background: "#000000"
+    center: GeoHealth research group
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd  
+      - text: "Surveillance methods"
+        href: 21-diseasemapping.qmd         
+      - text: "Dengue in Brazil"
+        href: 51-denguebrazil-info.qmd  
+      - text: "Communication"
+        href: 31-communication.qmd  
+      - text: "Data"
+        href: 99-data.qmd         
+      - text: "Resources"
+        href: 99-resources.qmd    
+      - text: "People"
+        href: 99-people.qmd        
+
+  sidebar:
+    - title: "Surveillance methods"
+      contents:
+        - 21-diseasemapping.qmd   
         - 22-nowcasting.qmd
-        - 23-forecasting.qmd        
-    - part: "Communication" 
-      chapters:
-        - 31-communication.qmd
-    - part: "Dengue in Brazil"
-      chapters:         
-        - 51-denguebrazil-info.qmd
+        - 23-forecasting.qmd 
+    - title: "Dengue in Brazil"
+      contents:
+        - 51-denguebrazil-info.qmd   
         - 52-denguebrazil-denguetracker.qmd
         - 53-denguebrazil-ews.qmd
         - 59-denguebrazil-data.qmd
-    - part: "Training"
-      chapters:  
-        - 71-resources.qmd
-    - references.qmd
 
 bibliography: [bibliography-digitaldatasources.bib, bibliography-diseasemapping.bib, bibliography-forecasting.bib, bibliography-nowcasting.bib]
 
 format:
   html:
+    page-layout: full
     theme: cosmo
     code-link: true
-  pdf:
-    documentclass: scrreprt
-
-editor: visual
 

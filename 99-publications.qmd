@@ -1,0 +1,54 @@
+# Publications
+
+```{r, echo = FALSE}
+# install.packages("remotes")
+# remotes::install_github("ropensci/RefManageR")
+# https://ropensci.org/blog/2020/05/07/rmd-citations/
+library(stringr)
+library(RefManageR)
+
+
+fnFormatBibliography <- function(b){
+if(length(b$author) == 1){
+authors <- paste0(b$author[[1]]$family, ". ")
+}
+if(length(b$author) == 2){
+authors <- paste0(b$author[[1]]$family, " and ", b$author[[2]]$family, ". ")
+}
+if(length(b$author) > 2){
+authors <- paste0(b$author[[1]]$family, " et al. ")
+}
+
+a <- paste0("<a href= '", b$url, "' target='_blank'> ", str_sub(b$title, 2, -2), "</a> <br>",
+authors, str_sub(b$journal, 2, -2), " (", b$year, ") <br><br>")
+return(a)
+}
+```
+
+## Disease mapping
+
+```{r, echo = FALSE, results='asis'}
+mybib <- RefManageR::ReadBib("bibliography-diseasemapping.bib", check = FALSE) 
+cat(sapply(mybib, FUN = fnFormatBibliography))
+```
+
+## Nowcasting
+
+```{r, echo = FALSE, results='asis'}
+mybib <- RefManageR::ReadBib("bibliography-nowcasting.bib", check = FALSE) 
+cat(sapply(mybib, FUN = fnFormatBibliography))
+```
+
+## Forecasting
+
+```{r, echo = FALSE, results='asis'}
+mybib <- RefManageR::ReadBib("bibliography-forecasting.bib", check = FALSE) 
+cat(sapply(mybib, FUN = fnFormatBibliography))
+```
+
+## Digital data sources
+
+```{r, echo = FALSE, results='asis'}
+mybib <- RefManageR::ReadBib("bibliography-digitaldatasources.bib", check = FALSE) 
+cat(sapply(mybib, FUN = fnFormatBibliography))
+```

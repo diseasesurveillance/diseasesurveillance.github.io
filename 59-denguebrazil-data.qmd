@@ -88,3 +88,5 @@ knitr::include_graphics("img/denguebrazil-corrofficialgoogle.png")
 ## Environment
 
 ## Socio-economic
+
+- Socio-economic index

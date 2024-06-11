@@ -1,177 +1,226 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Disease Surveillance",
-    "section": "",
-    "text": "Welcome to the disease surveillance project!\nWe provide tools to national health organizations that allow them to make the best use of their data to improve the health and quality of life of their populations. Our work primarily focus on surveillance of climate-sensitive diseases such as dengue in Brazil and malaria in Africa.\nWe develop innovative statistical and machine learning methods to help understand the geographical spread of diseases and forecast future cases. Our methods leverage multiple datasets from various sources, including temperature, precipitation, and socio-economic factors. Additionally, we use digital data sources to help determine disease levels in real-time.\nOur project aims to be a valuable resource for decision-makers and the general public seeking information on disease levels in various countries. We also provide researchers useful methods and software tools that they can utilize in their efforts to monitor diseases and guide decision-making in their own surveillance applications.\n\n\n\n\n\nFigure 1: #ShowYourStripes."
-  },
-  {
-    "objectID": "01-people.html",
-    "href": "01-people.html",
-    "title": "People",
-    "section": "",
-    "text": "The disease surveillance project is led by Paula Moraga, Assistant Professor of Statistics and PI of the GeoHealth research group at King Abdullah University of Science and Technology (KAUST). Funding for this work is provided by the Letten Foundation.\nThe project’s success is reliant on the cooperation of a number of collaborators and organizations worldwide. The team members listed below work on the development of statistical and machine learning methods for disease surveillance, and the translation of findings into actionable initiatives that improve health and wellbeing for all.\n\n\n\n\n\n Paula Moraga  KAUST\n\n\n Xiang Chen  KAUST\n\n\n Yang Xiao  KAUST\n\n\n\n\n Guilherme Soares  University of São Paulo\n\n\n Rafael Izbicki  Federal University of São Carlos\n\n\n Leo Bastos  Fiocruz\n\n\n\n\n Mario Gómez  University of Costa Rica\n\n\n Luis Barboza  University of Costa Rica"
-  },
-  {
-    "objectID": "11-data.html#official-disease-data",
-    "href": "11-data.html#official-disease-data",
-    "title": "1  Data",
-    "section": "1.1 Official disease data",
-    "text": "1.1 Official disease data\nMinistries and departments of health\n\nCases (number of individual cases reported)"
-  },
-  {
-    "objectID": "11-data.html#digital-data-sources",
-    "href": "11-data.html#digital-data-sources",
-    "title": "1  Data",
-    "section": "1.2 Digital data sources",
-    "text": "1.2 Digital data sources\nSearch query data, social media data\n\nGoogle trends data (index from 0 to 100)"
-  },
-  {
-    "objectID": "11-data.html#population",
-    "href": "11-data.html#population",
-    "title": "1  Data",
-    "section": "1.3 Population",
-    "text": "1.3 Population\nThe WorldPop Open Population Repository provides access to gridded population estimates."
-  },
-  {
-    "objectID": "11-data.html#climatic-and-environmental-data",
-    "href": "11-data.html#climatic-and-environmental-data",
-    "title": "1  Data",
-    "section": "1.4 Climatic and environmental data",
-    "text": "1.4 Climatic and environmental data\nFor each of the covariates, review on how it affects dengue/malaria/other infectious disease and references.\n\nTemperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data\n\nCopernicus climate data store\nThe R Package KrigR allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF). The package interfaces with the Climate Data Store (CDS) hosted by the Copernicus Climate Change Service (C3S) for retrieval of climate data. To use it, we need to create a CDS API Key.\nThe R package ag5Tools allows us to download and extract data from the “Agrometeorological indicators from 1979 to present and a spatial resolution of 0.1\\(^o \\times\\) 0.1\\(^o\\) (approximately 11 km \\(\\times\\) 11 km at the equator) derived from reanalysis” dataset (AgERA5)."
-  },
-  {
-    "objectID": "11-data.html#environment",
-    "href": "11-data.html#environment",
-    "title": "1  Data",
-    "section": "1.5 Environment",
-    "text": "1.5 Environment"
-  },
-  {
-    "objectID": "11-data.html#socio-economic",
-    "href": "11-data.html#socio-economic",
-    "title": "1  Data",
-    "section": "1.6 Socio-economic",
-    "text": "1.6 Socio-economic"
-  },
-  {
-    "objectID": "11-data.html#covariates-repositories",
-    "href": "11-data.html#covariates-repositories",
-    "title": "1  Data",
-    "section": "1.7 Covariates repositories",
-    "text": "1.7 Covariates repositories\n\n\n\n\n\n\n\n\n\n\n\nVariable\nSpatial resolution\nTemporal resolution\nTime period\nSource\nPackage\n\n\nTemperature\n\n\n1979-present and future?\n\n\n\n\nPrecipitation\n\n\n\n\n\n\n\nHumidity\n\n\n\n\n\n\n\nEl Niño/Southern Oscillation (ENSO)"
-  },
-  {
-    "objectID": "22-nowcasting.html",
-    "href": "22-nowcasting.html",
-    "title": "\n3  Nowcasting\n",
-    "section": "",
-    "text": "From Bastos et al. (2019)\n\nLess than 50% cases are reported in one week\nLess than 75% cases are reported in four weeks\nLess than 90% cases are reported in nine weeks\n\n\n\n\n\nBastos, Leonardo S., Theodoros Economou, Marcelo F. C. Gomes, Daniel A. M. Villela, Flavio C Coelho, Oswaldo G. Cruz, Oliver Stoner, Trevor Bailey, and Claudia T. Codeço. 2019. “A modelling approach for correcting reporting delays in disease surveillance data.” Statistics in Medicine. https://doi.org/10.1002/sim.8303."
-  },
-  {
-    "objectID": "51-denguebrazil-info.html",
-    "href": "51-denguebrazil-info.html",
-    "title": "\n6  Dengue\n",
-    "section": "",
-    "text": "Dengue is a viral infection that spreads to people through the bite of an infected Aedes species (Aedes aegypti or Aedes albopictus) mosquito. About half of the global population is currently at risk of contracting dengue fever, with an estimated 100 to 400 million infections occurring annually. Dengue is prevalent in tropical and subtropical regions worldwide, primarily in urban and semi-urban areas.\n\n\n\n\nFigure 6.1: Dengue incidence.\n\n\n\nAlthough many infections of the dengue virus (DENV) do not show symptoms or only result in mild flu-like illness, some cases can be severe and potentially fatal. Dengue fever does not have a specific treatment. Early detection and timely access to proper medical care significantly reduce the fatality rates associated with severe cases. Preventing and controlling dengue transmission relies on managing the the mosquitoes that act as vectors.\n\n\n\n\nFigure 6.2: Aedes Aegypti\n\n\n\n\n\n\n\nFigure 6.3: Vector control efforts."
-  },
-  {
-    "objectID": "52-denguebrazil-denguetracker.html",
-    "href": "52-denguebrazil-denguetracker.html",
-    "title": "\n7  Dengue tracker\n",
-    "section": "",
-    "text": "Dengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation. In Dengue-tracker, we provide weekly updates on the number of official dengue cases per state in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers and the general public in understanding dengue levels and guide their decisions.\n\nClick here to access Dengue-tracker\n\n\n\n\n\nFigure 7.1: Dengue-tracker"
-  },
-  {
-    "objectID": "53-denguebrazil-ews.html",
-    "href": "53-denguebrazil-ews.html",
-    "title": "\n8  EWS\n",
-    "section": "",
-    "text": "We are developing a disease surveillance system to forecast the future number of cases and the early detection of disease outbreaks. We are validating the system using dengue data from Brazil.\nSystem components\n\nData retrieval of official dengue data, search query data, population, climate and environmental covariates (download, clean and format data for analysis and visualization)\nNowcasting methods using digital, environmental and climate data. Data include temperature, precipitation, and Google trends using specific keywords related to dengue)\nForecasting methods using environmental and climate data (and ensemble of several methods)\nMethods for monitoring dengue in one municipality, and extension to models that borrow information from neighboring regions\nMethods performance by quantifying how well the methods predict future number of cases weeks or months in advance\nSoftware system to be used to monitor dengue in Brazil, and adaptable to other diseases and countries\nForecasting methods"
-  },
-  {
-    "objectID": "59-denguebrazil-data.html#map-of-brazilian-regions",
-    "href": "59-denguebrazil-data.html#map-of-brazilian-regions",
-    "title": "\n9  Data\n",
-    "section": "\n9.1 Map of Brazilian regions",
-    "text": "9.1 Map of Brazilian regions\nR package geobr\n\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_state(year = 2020, showProgress = FALSE)\n# length(unique(map$code_state)) # number of states: 27\nggplot(map) + geom_sf() + labs(title = \"States\")\n\n\n\nmap &lt;- read_micro_region(year = 2020, showProgress = FALSE)\n# length(unique(map$code_micro)) # number of microregions: 558\nggplot(map) + geom_sf() + labs(title = \"Microregions\")\n\n\n\n\n\nmap &lt;- read_municipality(year = 2020, showProgress = FALSE)\n# length(unique(map$code_muni)) # number of municipalities: 5570\nggplot(map) + geom_sf() + labs(title = \"Municipalities\")"
-  },
-  {
-    "objectID": "59-denguebrazil-data.html#dengue-data",
-    "href": "59-denguebrazil-data.html#dengue-data",
-    "title": "\n9  Data\n",
-    "section": "\n9.2 Dengue data",
-    "text": "9.2 Dengue data\nInfoDengue\nInfoDengue API\nDengue cases, nowcasts, temperature and humidity by city level and epidemiological week\n\nurl &lt;- \"https://info.dengue.mat.br/api/alertcity?\"\ngeocode &lt;- 3304557\ndisease &lt;- \"dengue\"\nformat &lt;- \"csv\"\new_start &lt;- 1\new_end &lt;- 52\ney_start &lt;- 2021\ney_end &lt;- 2021\n\ncons1 &lt;- paste0(url,\"geocode=\",geocode,\"&disease=\",disease,\"&format=\",format,\"&ew_start=\",ew_start,\"&ew_end=\",ew_end,\"&ey_start=\",ey_start,\"&ey_end=\",ey_end)\n\n\nlibrary(tidyverse)\nd &lt;- read_csv(cons1, show_col_types=FALSE) %&gt;% arrange(data_iniSE)\nglimpse(d)\nggplot(d, aes(SE, casos)) + geom_line()\n\n\n\n\n\nDengue incidence rate (cases per 100 000 residents per month) for ten Brazilian states (São Paulo and Minas Gerais from the southeast, Rio Grande do Sul and Santa Catarina from the south, Mato Grosso do Sul and Goias from the midwest, Ceará and Bahia from the northeast, Pará and Amazonas from the north). It is clear that the incidence rate is influenced by geographical and environmental factors, as described in Lowe et al. (2021)"
-  },
-  {
-    "objectID": "59-denguebrazil-data.html#google-trends-data",
-    "href": "59-denguebrazil-data.html#google-trends-data",
-    "title": "\n9  Data\n",
-    "section": "\n9.3 Google trends data",
-    "text": "9.3 Google trends data\n\n\n\n\n\nGoogle trends dengue data. Values in a range of 0 to 100, where 100 represents the maximal value. Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest"
-  },
-  {
-    "objectID": "59-denguebrazil-data.html#population",
-    "href": "59-denguebrazil-data.html#population",
-    "title": "\n9  Data\n",
-    "section": "\n9.4 Population",
-    "text": "9.4 Population"
-  },
-  {
-    "objectID": "59-denguebrazil-data.html#climate",
-    "href": "59-denguebrazil-data.html#climate",
-    "title": "\n9  Data\n",
-    "section": "\n9.5 Climate",
-    "text": "9.5 Climate\n\nTemperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data"
-  },
-  {
-    "objectID": "59-denguebrazil-data.html#environment",
-    "href": "59-denguebrazil-data.html#environment",
-    "title": "\n9  Data\n",
-    "section": "\n9.6 Environment",
-    "text": "9.6 Environment"
-  },
-  {
-    "objectID": "59-denguebrazil-data.html#socio-economic",
-    "href": "59-denguebrazil-data.html#socio-economic",
-    "title": "\n9  Data\n",
-    "section": "\n9.7 Socio-economic",
-    "text": "9.7 Socio-economic\n\n\n\n\nLowe, Rachel, Sophie A Lee, Kathleen M O’Reilly, Oliver J Brady, Leonardo Bastos, Gabriel Carrasco-Escobar, Rafael de Castro Catão, et al. 2021. “Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study.” The Lancet Planetary Health. https://doi.org/10.1016/S2542-5196(20)30292-8."
-  },
-  {
-    "objectID": "71-resources.html#books-on-spatial-data-analysis-and-visualization",
-    "href": "71-resources.html#books-on-spatial-data-analysis-and-visualization",
-    "title": "10  Resources",
-    "section": "10.1 Books on spatial data analysis and visualization",
-    "text": "10.1 Books on spatial data analysis and visualization\n Spatial Statistics for Data Science: Theory and Practice with R   Moraga. Chapman & Hall/CRC Data Science Series (2023)\n Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny   Moraga. Chapman & Hall/CRC Biostatistics Series (2019)"
-  },
-  {
-    "objectID": "71-resources.html#downloading-climate-and-environmental-data",
-    "href": "71-resources.html#downloading-climate-and-environmental-data",
-    "title": "10  Resources",
-    "section": "10.2 Downloading climate and environmental data",
-    "text": "10.2 Downloading climate and environmental data\nKrigR: an R package to download data from ERA5 from ECMWF\nrspatialdata tutorials"
-  },
-  {
-    "objectID": "71-resources.html#interactive-visualizations",
-    "href": "71-resources.html#interactive-visualizations",
-    "title": "10  Resources",
-    "section": "10.3 Interactive Visualizations",
-    "text": "10.3 Interactive Visualizations\nhtmlwidgets for R\nleaflet\napexcharter"
-  },
-  {
-    "objectID": "71-resources.html#building-shiny-web-applications",
-    "href": "71-resources.html#building-shiny-web-applications",
-    "title": "10  Resources",
-    "section": "10.4 Building Shiny web applications",
-    "text": "10.4 Building Shiny web applications\nShiny"
-  },
-  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Bastos, Leonardo S., Theodoros Economou, Marcelo F. C. Gomes, Daniel A.\nM. Villela, Flavio C Coelho, Oswaldo G. Cruz, Oliver Stoner, Trevor\nBailey, and Claudia T. Codeço. 2019. “A\nmodelling approach for correcting reporting delays in disease\nsurveillance data.” Statistics in\nMedicine. https://doi.org/10.1002/sim.8303.\n\n\nLowe, Rachel, Sophie A Lee, Kathleen M O’Reilly, Oliver J Brady,\nLeonardo Bastos, Gabriel Carrasco-Escobar, Rafael de Castro Catão, et\nal. 2021. “Combined effects of\nhydrometeorological hazards and urbanisation on dengue risk in Brazil: a\nspatiotemporal modelling study.” The Lancet\nPlanetary Health. https://doi.org/10.1016/S2542-5196(20)30292-8."
+    "text": "References"
+  },
+  {
+    "objectID": "99-resources.html",
+    "href": "99-resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Spatial Statistics for Data Science: Theory and Practice with R   Moraga. Chapman & Hall/CRC Data Science Series (2023)\n Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny   Moraga. Chapman & Hall/CRC Biostatistics Series (2019)\n\n\n\nKrigR: an R package to download data from ERA5 from ECMWF\nrspatialdata tutorials\n\n\n\nhtmlwidgets for R\nleaflet\napexcharter\n\n\n\nShiny"
+  },
+  {
+    "objectID": "99-resources.html#books-on-spatial-data-analysis-and-visualization",
+    "href": "99-resources.html#books-on-spatial-data-analysis-and-visualization",
+    "title": "Resources",
+    "section": "",
+    "text": "Spatial Statistics for Data Science: Theory and Practice with R   Moraga. Chapman & Hall/CRC Data Science Series (2023)\n Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny   Moraga. Chapman & Hall/CRC Biostatistics Series (2019)"
+  },
+  {
+    "objectID": "99-resources.html#downloading-climate-and-environmental-data",
+    "href": "99-resources.html#downloading-climate-and-environmental-data",
+    "title": "Resources",
+    "section": "",
+    "text": "KrigR: an R package to download data from ERA5 from ECMWF\nrspatialdata tutorials"
+  },
+  {
+    "objectID": "99-resources.html#interactive-visualizations",
+    "href": "99-resources.html#interactive-visualizations",
+    "title": "Resources",
+    "section": "",
+    "text": "htmlwidgets for R\nleaflet\napexcharter"
+  },
+  {
+    "objectID": "99-resources.html#building-shiny-web-applications",
+    "href": "99-resources.html#building-shiny-web-applications",
+    "title": "Resources",
+    "section": "",
+    "text": "Shiny"
+  },
+  {
+    "objectID": "99-people.html",
+    "href": "99-people.html",
+    "title": "People",
+    "section": "",
+    "text": "People\nThe disease surveillance project is led by Paula Moraga, Assistant Professor of Statistics and PI of the GeoHealth research group at King Abdullah University of Science and Technology (KAUST). Funding for this work is provided by the Letten Foundation.\nThe project’s success is reliant on the cooperation of a number of collaborators and organizations worldwide. The team members listed below work on the development of statistical and machine learning methods for disease surveillance, and the translation of findings into actionable initiatives that improve health and wellbeing for all.\n\n\n\n\n\n Paula Moraga  KAUST\n\n\n Xiang Chen  KAUST\n\n\n Yang Xiao  KAUST\n\n\n\n\n Guilherme Soares  University of São Paulo\n\n\n Rafael Izbicki  Federal University of São Carlos\n\n\n Leo Bastos  Fiocruz\n\n\n\n\n Mario Gómez  University of Costa Rica\n\n\n Luis Barboza  University of Costa Rica\n\n\n Shu Wei Chou Chen  University of Costa Rica"
+  },
+  {
+    "objectID": "59-denguebrazil-data.html",
+    "href": "59-denguebrazil-data.html",
+    "title": "Data",
+    "section": "",
+    "text": "R package geobr\n\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_state(year = 2020, showProgress = FALSE)\n# length(unique(map$code_state)) # number of states: 27\nggplot(map) + geom_sf() + labs(title = \"States\")\n\n\n\nmap &lt;- read_micro_region(year = 2020, showProgress = FALSE)\n# length(unique(map$code_micro)) # number of microregions: 558\nggplot(map) + geom_sf() + labs(title = \"Microregions\")\n\n\n\n\n\nmap &lt;- read_municipality(year = 2020, showProgress = FALSE)\n# length(unique(map$code_muni)) # number of municipalities: 5570\nggplot(map) + geom_sf() + labs(title = \"Municipalities\")\n\n\nInfoDengue\nInfoDengue API\nDengue cases, nowcasts, temperature and humidity by city level and epidemiological week\n\nurl &lt;- \"https://info.dengue.mat.br/api/alertcity?\"\ngeocode &lt;- 3304557\ndisease &lt;- \"dengue\"\nformat &lt;- \"csv\"\new_start &lt;- 1\new_end &lt;- 52\ney_start &lt;- 2021\ney_end &lt;- 2021\n\ncons1 &lt;- paste0(url,\"geocode=\",geocode,\"&disease=\",disease,\"&format=\",format,\"&ew_start=\",ew_start,\"&ew_end=\",ew_end,\"&ey_start=\",ey_start,\"&ey_end=\",ey_end)\n\n\nlibrary(tidyverse)\nd &lt;- read_csv(cons1, show_col_types=FALSE) %&gt;% arrange(data_iniSE)\nglimpse(d)\nggplot(d, aes(SE, casos)) + geom_line()\n\n\n\n\n\nDengue incidence rate (cases per 100 000 residents per month) for ten Brazilian states (São Paulo and Minas Gerais from the southeast, Rio Grande do Sul and Santa Catarina from the south, Mato Grosso do Sul and Goias from the midwest, Ceará and Bahia from the northeast, Pará and Amazonas from the north). It is clear that the incidence rate is influenced by geographical and environmental factors, as described in Lowe et al. (2021)\n\n\n\n\n\n\nGoogle trends dengue data. Values in a range of 0 to 100, where 100 represents the maximal value. Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest\n\n\n\n\n\n\n\n\n\n\n\nTemperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data\n\n\n\nSocio-economic index"
+  },
+  {
+    "objectID": "59-denguebrazil-data.html#map-of-brazilian-regions",
+    "href": "59-denguebrazil-data.html#map-of-brazilian-regions",
+    "title": "Data",
+    "section": "",
+    "text": "R package geobr\n\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_state(year = 2020, showProgress = FALSE)\n# length(unique(map$code_state)) # number of states: 27\nggplot(map) + geom_sf() + labs(title = \"States\")\n\n\n\nmap &lt;- read_micro_region(year = 2020, showProgress = FALSE)\n# length(unique(map$code_micro)) # number of microregions: 558\nggplot(map) + geom_sf() + labs(title = \"Microregions\")\n\n\n\n\n\nmap &lt;- read_municipality(year = 2020, showProgress = FALSE)\n# length(unique(map$code_muni)) # number of municipalities: 5570\nggplot(map) + geom_sf() + labs(title = \"Municipalities\")"
+  },
+  {
+    "objectID": "59-denguebrazil-data.html#dengue-data",
+    "href": "59-denguebrazil-data.html#dengue-data",
+    "title": "Data",
+    "section": "",
+    "text": "InfoDengue\nInfoDengue API\nDengue cases, nowcasts, temperature and humidity by city level and epidemiological week\n\nurl &lt;- \"https://info.dengue.mat.br/api/alertcity?\"\ngeocode &lt;- 3304557\ndisease &lt;- \"dengue\"\nformat &lt;- \"csv\"\new_start &lt;- 1\new_end &lt;- 52\ney_start &lt;- 2021\ney_end &lt;- 2021\n\ncons1 &lt;- paste0(url,\"geocode=\",geocode,\"&disease=\",disease,\"&format=\",format,\"&ew_start=\",ew_start,\"&ew_end=\",ew_end,\"&ey_start=\",ey_start,\"&ey_end=\",ey_end)\n\n\nlibrary(tidyverse)\nd &lt;- read_csv(cons1, show_col_types=FALSE) %&gt;% arrange(data_iniSE)\nglimpse(d)\nggplot(d, aes(SE, casos)) + geom_line()\n\n\n\n\n\nDengue incidence rate (cases per 100 000 residents per month) for ten Brazilian states (São Paulo and Minas Gerais from the southeast, Rio Grande do Sul and Santa Catarina from the south, Mato Grosso do Sul and Goias from the midwest, Ceará and Bahia from the northeast, Pará and Amazonas from the north). It is clear that the incidence rate is influenced by geographical and environmental factors, as described in Lowe et al. (2021)"
+  },
+  {
+    "objectID": "59-denguebrazil-data.html#google-trends-data",
+    "href": "59-denguebrazil-data.html#google-trends-data",
+    "title": "Data",
+    "section": "",
+    "text": "Google trends dengue data. Values in a range of 0 to 100, where 100 represents the maximal value. Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest"
+  },
+  {
+    "objectID": "59-denguebrazil-data.html#climate",
+    "href": "59-denguebrazil-data.html#climate",
+    "title": "Data",
+    "section": "",
+    "text": "Temperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data"
+  },
+  {
+    "objectID": "59-denguebrazil-data.html#socio-economic",
+    "href": "59-denguebrazil-data.html#socio-economic",
+    "title": "Data",
+    "section": "",
+    "text": "Socio-economic index"
+  },
+  {
+    "objectID": "52-denguebrazil-denguetracker.html",
+    "href": "52-denguebrazil-denguetracker.html",
+    "title": "Dengue tracker",
+    "section": "",
+    "text": "Dengue tracker\nDengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation. In Dengue-tracker, we provide weekly updates on the number of official dengue cases per state in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers and the general public in understanding dengue levels and guide their decisions.\n\nClick here to access Dengue-tracker\n\n\n\n\n\nFigure 1: Dengue-tracker"
+  },
+  {
+    "objectID": "31-communication.html",
+    "href": "31-communication.html",
+    "title": "Communication",
+    "section": "",
+    "text": "Communication"
+  },
+  {
+    "objectID": "22-nowcasting.html",
+    "href": "22-nowcasting.html",
+    "title": "Nowcasting",
+    "section": "",
+    "text": "Nowcasting\n\n\n\n\n\nFrom Bastos et al. (2019)\n\nLess than 50% cases are reported in one week\nLess than 75% cases are reported in four weeks\nLess than 90% cases are reported in nine weeks\n\n\n\n\nReferences\n\nBastos, Leonardo S., Theodoros Economou, Marcelo F. C. Gomes, Daniel A. M. Villela, Flavio C Coelho, Oswaldo G. Cruz, Oliver Stoner, Trevor Bailey, and Claudia T. Codeço. 2019. “A modelling approach for correcting reporting delays in disease surveillance data.” Statistics in Medicine. https://doi.org/10.1002/sim.8303."
+  },
+  {
+    "objectID": "21-diseasemapping.html",
+    "href": "21-diseasemapping.html",
+    "title": "Disease mapping",
+    "section": "",
+    "text": "Disease mapping"
+  },
+  {
+    "objectID": "23-forecasting.html",
+    "href": "23-forecasting.html",
+    "title": "Forecasting",
+    "section": "",
+    "text": "Forecasting"
+  },
+  {
+    "objectID": "51-denguebrazil-info.html",
+    "href": "51-denguebrazil-info.html",
+    "title": "Dengue",
+    "section": "",
+    "text": "Dengue\nDengue is a viral infection that spreads to people through the bite of an infected Aedes species (Aedes aegypti or Aedes albopictus) mosquito. About half of the global population is currently at risk of contracting dengue fever, with an estimated 100 to 400 million infections occurring annually. Dengue is prevalent in tropical and subtropical regions worldwide, primarily in urban and semi-urban areas.\n\n\n\n\nFigure 1: Dengue incidence.\n\n\n\nAlthough many infections of the dengue virus (DENV) do not show symptoms or only result in mild flu-like illness, some cases can be severe and potentially fatal. Dengue fever does not have a specific treatment. Early detection and timely access to proper medical care significantly reduce the fatality rates associated with severe cases. Preventing and controlling dengue transmission relies on managing the the mosquitoes that act as vectors.\n\n\n\n\nFigure 2: Aedes Aegypti\n\n\n\n\n\n\n\nFigure 3: Vector control efforts."
+  },
+  {
+    "objectID": "53-denguebrazil-ews.html",
+    "href": "53-denguebrazil-ews.html",
+    "title": "EWS",
+    "section": "",
+    "text": "EWS\nWe are developing a disease surveillance system to forecast the future number of cases and the early detection of disease outbreaks. We are validating the system using dengue data from Brazil.\nSystem components\n\nData retrieval of official dengue data, search query data, population, climate and environmental covariates (download, clean and format data for analysis and visualization)\nNowcasting methods using digital, environmental and climate data. Data include temperature, precipitation, and Google trends using specific keywords related to dengue)\nForecasting methods using environmental and climate data (and ensemble of several methods)\nMethods for monitoring dengue in one municipality, and extension to models that borrow information from neighboring regions\nMethods performance by quantifying how well the methods predict future number of cases weeks or months in advance\nSoftware system to be used to monitor dengue in Brazil, and adaptable to other diseases and countries\nForecasting methods"
+  },
+  {
+    "objectID": "99-data.html",
+    "href": "99-data.html",
+    "title": "Data",
+    "section": "",
+    "text": "Ministries and departments of health\n\nCases (number of individual cases reported)\n\n\n\n\nThe WorldPop Open Population Repository provides access to gridded population estimates.\n\n\n\nSearch query data, social media data\n\nGoogle trends data (index from 0 to 100)\n\n\n\n\nFor each of the covariates, review on how it affects dengue/malaria/other infectious disease and references.\n\nTemperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data\n\nCopernicus climate data store\nThe R Package KrigR allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF). The package interfaces with the Climate Data Store (CDS) hosted by the Copernicus Climate Change Service (C3S) for retrieval of climate data. To use it, we need to create a CDS API Key.\nThe R package ag5Tools allows us to download and extract data from the “Agrometeorological indicators from 1979 to present and a spatial resolution of 0.1\\(^o \\times\\) 0.1\\(^o\\) (approximately 11 km \\(\\times\\) 11 km at the equator) derived from reanalysis” dataset (AgERA5).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariable\nSpatial resolution\nTemporal resolution\nTime period\nSource\nPackage\n\n\nTemperature\n\n\n1979-present and future?\n\n\n\n\nPrecipitation\n\n\n\n\n\n\n\nHumidity\n\n\n\n\n\n\n\nEl Niño/Southern Oscillation (ENSO)"
+  },
+  {
+    "objectID": "99-data.html#official-disease-data",
+    "href": "99-data.html#official-disease-data",
+    "title": "Data",
+    "section": "",
+    "text": "Ministries and departments of health\n\nCases (number of individual cases reported)"
+  },
+  {
+    "objectID": "99-data.html#population",
+    "href": "99-data.html#population",
+    "title": "Data",
+    "section": "",
+    "text": "The WorldPop Open Population Repository provides access to gridded population estimates."
+  },
+  {
+    "objectID": "99-data.html#digital-data-sources",
+    "href": "99-data.html#digital-data-sources",
+    "title": "Data",
+    "section": "",
+    "text": "Search query data, social media data\n\nGoogle trends data (index from 0 to 100)"
+  },
+  {
+    "objectID": "99-data.html#climatic-and-environmental-data",
+    "href": "99-data.html#climatic-and-environmental-data",
+    "title": "Data",
+    "section": "",
+    "text": "For each of the covariates, review on how it affects dengue/malaria/other infectious disease and references.\n\nTemperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data\n\nCopernicus climate data store\nThe R Package KrigR allows us to download, preprocess, and downscale data from the European Centre for Medium-range Weather Forecasts ReAnalysis 5 (ERA5) family provided by the European Centre for Medium‐Range Weather Forecasts (ECMWF). The package interfaces with the Climate Data Store (CDS) hosted by the Copernicus Climate Change Service (C3S) for retrieval of climate data. To use it, we need to create a CDS API Key.\nThe R package ag5Tools allows us to download and extract data from the “Agrometeorological indicators from 1979 to present and a spatial resolution of 0.1\\(^o \\times\\) 0.1\\(^o\\) (approximately 11 km \\(\\times\\) 11 km at the equator) derived from reanalysis” dataset (AgERA5)."
+  },
+  {
+    "objectID": "99-data.html#covariates-repositories",
+    "href": "99-data.html#covariates-repositories",
+    "title": "Data",
+    "section": "",
+    "text": "Variable\nSpatial resolution\nTemporal resolution\nTime period\nSource\nPackage\n\n\nTemperature\n\n\n1979-present and future?\n\n\n\n\nPrecipitation\n\n\n\n\n\n\n\nHumidity\n\n\n\n\n\n\n\nEl Niño/Southern Oscillation (ENSO)"
+  },
+  {
+    "objectID": "99-publications.html",
+    "href": "99-publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny Moraga. Chapman & Hall/CRC Biostatistics Series (2019)  Small Area Disease Risk Estimation and Visualization Using R Moraga. The R Journal (2018) \n\n A modelling approach for correcting reporting delays in disease surveillance data Bastos et al. Statistics in Medicine (2019) \n\n A reproducible ensemble machine learning approach to forecast dengue outbreaks Sebastianelli et al. Scientific Reports (2024)  Bayesian spatio-temporal model with INLA for dengue fever risk prediction in Costa Rica Chou-Chen et al. Environmental and Ecological Statistics (2023)  Deep learning models for forecasting dengue fever based on climate data in Vietnam Nguyen et al. PLOS Neglected Tropical Diseases (2022)  Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study Lowe et al. The Lancet Planetary Health (2021)  An open challenge to advance probabilistic forecasting for dengue epidemics Johansson et al. PNAS (2019) \n\n Predicting dengue incidence leveraging internet-based data sources. A case study in 20 cities in Brazil Koplewitz et al. PLOS Neglected Tropical Diseases (2022)  Using heterogeneous data to identify signatures of dengue outbreaks at fine spatio-temporal scales across Brazil Castro et al. PLOS Neglected Tropical Diseases (2021)  Google Health Trends performance reflecting dengue incidence for the Brazilian states Romero-Alvarez et al. BMC Infectious Diseases (2020)  Where did I get dengue? Detecting spatial clusters of infection risk with social network data Souza et al. Spatial and Spatio-temporal Epidemiology (2019)  Where did I get dengue? Detecting spatial clusters of infection risk with social network data Souza et al. Spatial and Spatio-temporal Epidemiology (2019)  Identifying High-Risk Areas for Dengue Infection Using Mobility Patterns on Twitter Souza et al. Online Journal of Public Health Informatics (2019)  Accurate estimation of influenza epidemics using Google search data via ARGO Yang et al. Proceedings of the National Academy of Sciences (2015)  Advances in using Internet searches to track dengue Yang et al. PLOS Computational Biology (2017)  Addressing Google Trends inconsistencies Cebrián and Domenech. Technological Forecasting and Social Change (2024)  The Proper Use of Google Trends in Forecasting Models Medeiros and Pires. arXiv (2021)"
+  },
+  {
+    "objectID": "99-publications.html#disease-mapping",
+    "href": "99-publications.html#disease-mapping",
+    "title": "Publications",
+    "section": "",
+    "text": "Geospatial Health Data: Modeling and Visualization with R-INLA and Shiny Moraga. Chapman & Hall/CRC Biostatistics Series (2019)  Small Area Disease Risk Estimation and Visualization Using R Moraga. The R Journal (2018)"
+  },
+  {
+    "objectID": "99-publications.html#nowcasting",
+    "href": "99-publications.html#nowcasting",
+    "title": "Publications",
+    "section": "",
+    "text": "A modelling approach for correcting reporting delays in disease surveillance data Bastos et al. Statistics in Medicine (2019)"
+  },
+  {
+    "objectID": "99-publications.html#forecasting",
+    "href": "99-publications.html#forecasting",
+    "title": "Publications",
+    "section": "",
+    "text": "A reproducible ensemble machine learning approach to forecast dengue outbreaks Sebastianelli et al. Scientific Reports (2024)  Bayesian spatio-temporal model with INLA for dengue fever risk prediction in Costa Rica Chou-Chen et al. Environmental and Ecological Statistics (2023)  Deep learning models for forecasting dengue fever based on climate data in Vietnam Nguyen et al. PLOS Neglected Tropical Diseases (2022)  Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study Lowe et al. The Lancet Planetary Health (2021)  An open challenge to advance probabilistic forecasting for dengue epidemics Johansson et al. PNAS (2019)"
+  },
+  {
+    "objectID": "99-publications.html#digital-data-sources",
+    "href": "99-publications.html#digital-data-sources",
+    "title": "Publications",
+    "section": "",
+    "text": "Predicting dengue incidence leveraging internet-based data sources. A case study in 20 cities in Brazil Koplewitz et al. PLOS Neglected Tropical Diseases (2022)  Using heterogeneous data to identify signatures of dengue outbreaks at fine spatio-temporal scales across Brazil Castro et al. PLOS Neglected Tropical Diseases (2021)  Google Health Trends performance reflecting dengue incidence for the Brazilian states Romero-Alvarez et al. BMC Infectious Diseases (2020)  Where did I get dengue? Detecting spatial clusters of infection risk with social network data Souza et al. Spatial and Spatio-temporal Epidemiology (2019)  Where did I get dengue? Detecting spatial clusters of infection risk with social network data Souza et al. Spatial and Spatio-temporal Epidemiology (2019)  Identifying High-Risk Areas for Dengue Infection Using Mobility Patterns on Twitter Souza et al. Online Journal of Public Health Informatics (2019)  Accurate estimation of influenza epidemics using Google search data via ARGO Yang et al. Proceedings of the National Academy of Sciences (2015)  Advances in using Internet searches to track dengue Yang et al. PLOS Computational Biology (2017)  Addressing Google Trends inconsistencies Cebrián and Domenech. Technological Forecasting and Social Change (2024)  The Proper Use of Google Trends in Forecasting Models Medeiros and Pires. arXiv (2021)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to the disease surveillance project!",
+    "section": "",
+    "text": "Welcome to the disease surveillance project!\nWe provide tools to national health organizations that allow them to make the best use of their data to improve the health and quality of life of their populations. Our work primarily focus on surveillance of climate-sensitive diseases such as dengue in Brazil and malaria in Africa.\nWe develop innovative statistical and machine learning methods to help understand the geographical spread of diseases and forecast future cases. Our methods leverage multiple datasets from various sources, including temperature, precipitation, and socio-economic factors. Additionally, we use digital data sources to help determine disease levels in real-time.\nOur project aims to be a valuable resource for decision-makers and the general public seeking information on disease levels in various countries. We also provide researchers useful methods and software tools that they can utilize in their efforts to monitor diseases and guide decision-making in their own surveillance applications.\n\n\n\n\n\nFigure 1: #ShowYourStripes."
   }
 ]
