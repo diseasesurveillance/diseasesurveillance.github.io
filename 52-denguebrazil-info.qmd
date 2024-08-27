@@ -1,6 +1,6 @@
 # Dengue
 
-Dengue is a viral infection that spreads to people through the bite of an infected *Aedes* species (*Aedes aegypti* or *Aedes albopictus*) mosquito. About half of the global population is currently at risk of contracting dengue fever, with an estimated 100 to 400 million infections occurring annually. Dengue is prevalent in tropical and subtropical regions worldwide, primarily in urban and semi-urban areas.
+Dengue is a viral infection that spreads to people through the bite of an infected *Aedes* species mosquito. About half of the global population is currently at risk of contracting dengue fever, with an estimated 100 to 400 million infections occurring annually. Dengue is prevalent in tropical and subtropical regions worldwide, primarily in urban and semi-urban areas.
 
 ```{r}
 #| label: fig-dengueincidence

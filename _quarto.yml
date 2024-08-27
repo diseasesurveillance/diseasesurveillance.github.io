@@ -14,7 +14,7 @@ website:
       - text: "Surveillance methods"
         href: 21-diseasemapping.qmd         
       - text: "Dengue in Brazil"
-        href: 51-denguebrazil-info.qmd  
+        href: 51-denguebrazil-denguetracker.qmd  
       - text: "Communication"
         href: 31-communication.qmd  
       - text: "Data"
@@ -32,8 +32,8 @@ website:
         - 23-forecasting.qmd 
     - title: "Dengue in Brazil"
       contents:
-        - 51-denguebrazil-info.qmd   
-        - 52-denguebrazil-denguetracker.qmd
+        - 51-denguebrazil-denguetracker.qmd
+        - 52-denguebrazil-info.qmd   
         - 53-denguebrazil-ews.qmd
         - 59-denguebrazil-data.qmd
 

@@ -46,56 +46,84 @@
     "href": "99-people.html",
     "title": "People",
     "section": "",
-    "text": "People\nThe disease surveillance project is led by Paula Moraga, Assistant Professor of Statistics and PI of the GeoHealth research group at King Abdullah University of Science and Technology (KAUST). Funding for this work is provided by the Letten Foundation.\nThe project’s success is reliant on the cooperation of a number of collaborators and organizations worldwide. The team members listed below work on the development of statistical and machine learning methods for disease surveillance, and the translation of findings into actionable initiatives that improve health and wellbeing for all.\n\n\n\n\n\n Paula Moraga  KAUST\n\n\n Xiang Chen  KAUST\n\n\n Yang Xiao  KAUST\n\n\n\n\n Guilherme Soares  University of São Paulo\n\n\n Rafael Izbicki  Federal University of São Carlos\n\n\n Leo Bastos  Fiocruz\n\n\n\n\n Mario Gómez  University of Costa Rica\n\n\n Luis Barboza  University of Costa Rica\n\n\n Shu Wei Chou Chen  University of Costa Rica"
+    "text": "People\nThe disease surveillance project is led by Paula Moraga, Assistant Professor of Statistics and PI of the GeoHealth research group at King Abdullah University of Science and Technology (KAUST). Funding for this work is provided by the Letten Foundation.\nThe project’s success is reliant on the cooperation of a number of collaborators and organizations worldwide. The team members listed below work on the development of statistical and machine learning methods for disease surveillance, and the translation of findings into actionable initiatives that improve health and wellbeing for all.\n\n\n\n\n\n Paula Moraga  KAUST\n\n\n Xiang Chen  KAUST\n\n\n Yang Xiao  KAUST\n\n\n\n\n Guilherme Soares  University of São Paulo\n\n\n Rafael Izbicki  Federal University of São Carlos\n\n\n Leo Bastos  Fiocruz"
   },
   {
     "objectID": "59-denguebrazil-data.html",
     "href": "59-denguebrazil-data.html",
     "title": "Data",
     "section": "",
-    "text": "R package geobr\n\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_state(year = 2020, showProgress = FALSE)\n# length(unique(map$code_state)) # number of states: 27\nggplot(map) + geom_sf() + labs(title = \"States\")\n\n\n\nmap &lt;- read_micro_region(year = 2020, showProgress = FALSE)\n# length(unique(map$code_micro)) # number of microregions: 558\nggplot(map) + geom_sf() + labs(title = \"Microregions\")\n\n\n\n\n\nmap &lt;- read_municipality(year = 2020, showProgress = FALSE)\n# length(unique(map$code_muni)) # number of municipalities: 5570\nggplot(map) + geom_sf() + labs(title = \"Municipalities\")\n\n\nInfoDengue\nInfoDengue API\nDengue cases, nowcasts, temperature and humidity by city level and epidemiological week\n\nurl &lt;- \"https://info.dengue.mat.br/api/alertcity?\"\ngeocode &lt;- 3304557\ndisease &lt;- \"dengue\"\nformat &lt;- \"csv\"\new_start &lt;- 1\new_end &lt;- 52\ney_start &lt;- 2021\ney_end &lt;- 2021\n\ncons1 &lt;- paste0(url,\"geocode=\",geocode,\"&disease=\",disease,\"&format=\",format,\"&ew_start=\",ew_start,\"&ew_end=\",ew_end,\"&ey_start=\",ey_start,\"&ey_end=\",ey_end)\n\n\nlibrary(tidyverse)\nd &lt;- read_csv(cons1, show_col_types=FALSE) %&gt;% arrange(data_iniSE)\nglimpse(d)\nggplot(d, aes(SE, casos)) + geom_line()\n\n\n\n\n\nDengue incidence rate (cases per 100 000 residents per month) for ten Brazilian states (São Paulo and Minas Gerais from the southeast, Rio Grande do Sul and Santa Catarina from the south, Mato Grosso do Sul and Goias from the midwest, Ceará and Bahia from the northeast, Pará and Amazonas from the north). It is clear that the incidence rate is influenced by geographical and environmental factors, as described in Lowe et al. (2021)\n\n\n\n\n\n\nGoogle trends dengue data. Values in a range of 0 to 100, where 100 represents the maximal value. Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest\n\n\n\n\n\n\n\n\n\n\n\nTemperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data\n\n\n\nSocio-economic index"
+    "text": "R package geobr\n\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_state(year = 2020, showProgress = FALSE)\n# length(unique(map$code_state)) # number of states: 27\nggplot(map) + geom_sf() + labs(title = \"States\")\n\n\n\n\n\n\nmap &lt;- read_micro_region(year = 2020, showProgress = FALSE)\n# length(unique(map$code_micro)) # number of microregions: 558\nggplot(map) + geom_sf() + labs(title = \"Microregions\")\n\n\n\n\n\n\n\n\nmap &lt;- read_municipality(year = 2020, showProgress = FALSE)\n# length(unique(map$code_muni)) # number of municipalities: 5570\nggplot(map) + geom_sf() + labs(title = \"Municipalities\")\n\n\nInfoDengue\nInfoDengue API\nDengue cases, nowcasts, temperature and humidity by city level and epidemiological week\n\nurl &lt;- \"https://info.dengue.mat.br/api/alertcity?\"\ngeocode &lt;- 3304557\ndisease &lt;- \"dengue\"\nformat &lt;- \"csv\"\new_start &lt;- 1\new_end &lt;- 52\ney_start &lt;- 2021\ney_end &lt;- 2021\n\ncons1 &lt;- paste0(url,\"geocode=\",geocode,\"&disease=\",disease,\"&format=\",format,\"&ew_start=\",ew_start,\"&ew_end=\",ew_end,\"&ey_start=\",ey_start,\"&ey_end=\",ey_end)\n\n\nlibrary(tidyverse)\nd &lt;- read_csv(cons1, show_col_types=FALSE) %&gt;% arrange(data_iniSE)\nglimpse(d)\nggplot(d, aes(SE, casos)) + geom_line()\n\n\n\n\n\n\n\n\nDengue incidence rate (cases per 100 000 residents per month) for ten Brazilian states (São Paulo and Minas Gerais from the southeast, Rio Grande do Sul and Santa Catarina from the south, Mato Grosso do Sul and Goias from the midwest, Ceará and Bahia from the northeast, Pará and Amazonas from the north). It is clear that the incidence rate is influenced by geographical and environmental factors, as described in Lowe et al. (2021)\n\n\n\n\n\n\n\n\n\nGoogle trends dengue data. Values in a range of 0 to 100, where 100 represents the maximal value. Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest\n\n\n\n\n\n\n\n\n\n\n\nTemperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data\n\n\n\nSocio-economic index",
+    "crumbs": [
+      "Dengue in Brazil",
+      "Data"
+    ]
   },
   {
     "objectID": "59-denguebrazil-data.html#map-of-brazilian-regions",
     "href": "59-denguebrazil-data.html#map-of-brazilian-regions",
     "title": "Data",
     "section": "",
-    "text": "R package geobr\n\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_state(year = 2020, showProgress = FALSE)\n# length(unique(map$code_state)) # number of states: 27\nggplot(map) + geom_sf() + labs(title = \"States\")\n\n\n\nmap &lt;- read_micro_region(year = 2020, showProgress = FALSE)\n# length(unique(map$code_micro)) # number of microregions: 558\nggplot(map) + geom_sf() + labs(title = \"Microregions\")\n\n\n\n\n\nmap &lt;- read_municipality(year = 2020, showProgress = FALSE)\n# length(unique(map$code_muni)) # number of municipalities: 5570\nggplot(map) + geom_sf() + labs(title = \"Municipalities\")"
+    "text": "R package geobr\n\nlibrary(geobr)\nlibrary(ggplot2)\n\nmap &lt;- read_state(year = 2020, showProgress = FALSE)\n# length(unique(map$code_state)) # number of states: 27\nggplot(map) + geom_sf() + labs(title = \"States\")\n\n\n\n\n\n\nmap &lt;- read_micro_region(year = 2020, showProgress = FALSE)\n# length(unique(map$code_micro)) # number of microregions: 558\nggplot(map) + geom_sf() + labs(title = \"Microregions\")\n\n\n\n\n\n\n\n\nmap &lt;- read_municipality(year = 2020, showProgress = FALSE)\n# length(unique(map$code_muni)) # number of municipalities: 5570\nggplot(map) + geom_sf() + labs(title = \"Municipalities\")",
+    "crumbs": [
+      "Dengue in Brazil",
+      "Data"
+    ]
   },
   {
     "objectID": "59-denguebrazil-data.html#dengue-data",
     "href": "59-denguebrazil-data.html#dengue-data",
     "title": "Data",
     "section": "",
-    "text": "InfoDengue\nInfoDengue API\nDengue cases, nowcasts, temperature and humidity by city level and epidemiological week\n\nurl &lt;- \"https://info.dengue.mat.br/api/alertcity?\"\ngeocode &lt;- 3304557\ndisease &lt;- \"dengue\"\nformat &lt;- \"csv\"\new_start &lt;- 1\new_end &lt;- 52\ney_start &lt;- 2021\ney_end &lt;- 2021\n\ncons1 &lt;- paste0(url,\"geocode=\",geocode,\"&disease=\",disease,\"&format=\",format,\"&ew_start=\",ew_start,\"&ew_end=\",ew_end,\"&ey_start=\",ey_start,\"&ey_end=\",ey_end)\n\n\nlibrary(tidyverse)\nd &lt;- read_csv(cons1, show_col_types=FALSE) %&gt;% arrange(data_iniSE)\nglimpse(d)\nggplot(d, aes(SE, casos)) + geom_line()\n\n\n\n\n\nDengue incidence rate (cases per 100 000 residents per month) for ten Brazilian states (São Paulo and Minas Gerais from the southeast, Rio Grande do Sul and Santa Catarina from the south, Mato Grosso do Sul and Goias from the midwest, Ceará and Bahia from the northeast, Pará and Amazonas from the north). It is clear that the incidence rate is influenced by geographical and environmental factors, as described in Lowe et al. (2021)"
+    "text": "InfoDengue\nInfoDengue API\nDengue cases, nowcasts, temperature and humidity by city level and epidemiological week\n\nurl &lt;- \"https://info.dengue.mat.br/api/alertcity?\"\ngeocode &lt;- 3304557\ndisease &lt;- \"dengue\"\nformat &lt;- \"csv\"\new_start &lt;- 1\new_end &lt;- 52\ney_start &lt;- 2021\ney_end &lt;- 2021\n\ncons1 &lt;- paste0(url,\"geocode=\",geocode,\"&disease=\",disease,\"&format=\",format,\"&ew_start=\",ew_start,\"&ew_end=\",ew_end,\"&ey_start=\",ey_start,\"&ey_end=\",ey_end)\n\n\nlibrary(tidyverse)\nd &lt;- read_csv(cons1, show_col_types=FALSE) %&gt;% arrange(data_iniSE)\nglimpse(d)\nggplot(d, aes(SE, casos)) + geom_line()\n\n\n\n\n\n\n\n\nDengue incidence rate (cases per 100 000 residents per month) for ten Brazilian states (São Paulo and Minas Gerais from the southeast, Rio Grande do Sul and Santa Catarina from the south, Mato Grosso do Sul and Goias from the midwest, Ceará and Bahia from the northeast, Pará and Amazonas from the north). It is clear that the incidence rate is influenced by geographical and environmental factors, as described in Lowe et al. (2021)",
+    "crumbs": [
+      "Dengue in Brazil",
+      "Data"
+    ]
   },
   {
     "objectID": "59-denguebrazil-data.html#google-trends-data",
     "href": "59-denguebrazil-data.html#google-trends-data",
     "title": "Data",
     "section": "",
-    "text": "Google trends dengue data. Values in a range of 0 to 100, where 100 represents the maximal value. Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest"
+    "text": "Google trends dengue data. Values in a range of 0 to 100, where 100 represents the maximal value. Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest",
+    "crumbs": [
+      "Dengue in Brazil",
+      "Data"
+    ]
   },
   {
     "objectID": "59-denguebrazil-data.html#climate",
     "href": "59-denguebrazil-data.html#climate",
     "title": "Data",
     "section": "",
-    "text": "Temperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data"
+    "text": "Temperature\nPrecipitation\nHumidity\nEl Niño/Southern Oscillation (ENSO) index\nHistorical and future data",
+    "crumbs": [
+      "Dengue in Brazil",
+      "Data"
+    ]
   },
   {
     "objectID": "59-denguebrazil-data.html#socio-economic",
     "href": "59-denguebrazil-data.html#socio-economic",
     "title": "Data",
     "section": "",
-    "text": "Socio-economic index"
+    "text": "Socio-economic index",
+    "crumbs": [
+      "Dengue in Brazil",
+      "Data"
+    ]
   },
   {
-    "objectID": "52-denguebrazil-denguetracker.html",
-    "href": "52-denguebrazil-denguetracker.html",
-    "title": "Dengue tracker",
+    "objectID": "52-denguebrazil-info.html",
+    "href": "52-denguebrazil-info.html",
+    "title": "Dengue",
     "section": "",
-    "text": "Dengue tracker\nDengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation. In Dengue-tracker, we provide weekly updates on the number of official dengue cases per state in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers and the general public in understanding dengue levels and guide their decisions.\n\nClick here to access Dengue-tracker\n\n\n\n\n\nFigure 1: Dengue-tracker"
+    "text": "Dengue\nDengue is a viral infection that spreads to people through the bite of an infected Aedes species mosquito. About half of the global population is currently at risk of contracting dengue fever, with an estimated 100 to 400 million infections occurring annually. Dengue is prevalent in tropical and subtropical regions worldwide, primarily in urban and semi-urban areas.\n\n\n\n\n\n\n\nFigure 1: Dengue incidence.\n\n\n\n\nAlthough many infections of the dengue virus (DENV) do not show symptoms or only result in mild flu-like illness, some cases can be severe and potentially fatal. Dengue fever does not have a specific treatment. Early detection and timely access to proper medical care significantly reduce the fatality rates associated with severe cases. Preventing and controlling dengue transmission relies on managing the the mosquitoes that act as vectors.\n\n\n\n\n\n\n\nFigure 2: Aedes Aegypti\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Vector control efforts.",
+    "crumbs": [
+      "Dengue in Brazil",
+      "Dengue"
+    ]
   },
   {
     "objectID": "31-communication.html",
@@ -109,35 +137,55 @@
     "href": "22-nowcasting.html",
     "title": "Nowcasting",
     "section": "",
-    "text": "Nowcasting\n\n\n\n\n\nFrom Bastos et al. (2019)\n\nLess than 50% cases are reported in one week\nLess than 75% cases are reported in four weeks\nLess than 90% cases are reported in nine weeks\n\n\n\n\nReferences\n\nBastos, Leonardo S., Theodoros Economou, Marcelo F. C. Gomes, Daniel A. M. Villela, Flavio C Coelho, Oswaldo G. Cruz, Oliver Stoner, Trevor Bailey, and Claudia T. Codeço. 2019. “A modelling approach for correcting reporting delays in disease surveillance data.” Statistics in Medicine. https://doi.org/10.1002/sim.8303."
+    "text": "Nowcasting\n\n\n\n\n\n\n\n\nFrom Bastos et al. (2019)\n\nLess than 50% cases are reported in one week\nLess than 75% cases are reported in four weeks\nLess than 90% cases are reported in nine weeks\n\n\n\n\nReferences\n\nBastos, Leonardo S., Theodoros Economou, Marcelo F. C. Gomes, Daniel A. M. Villela, Flavio C Coelho, Oswaldo G. Cruz, Oliver Stoner, Trevor Bailey, and Claudia T. Codeço. 2019. “A modelling approach for correcting reporting delays in disease surveillance data.” Statistics in Medicine. https://doi.org/10.1002/sim.8303.",
+    "crumbs": [
+      "Surveillance methods",
+      "Nowcasting"
+    ]
   },
   {
     "objectID": "21-diseasemapping.html",
     "href": "21-diseasemapping.html",
     "title": "Disease mapping",
     "section": "",
-    "text": "Disease mapping"
+    "text": "Disease mapping",
+    "crumbs": [
+      "Surveillance methods",
+      "Disease mapping"
+    ]
   },
   {
     "objectID": "23-forecasting.html",
     "href": "23-forecasting.html",
     "title": "Forecasting",
     "section": "",
-    "text": "Forecasting"
+    "text": "Forecasting",
+    "crumbs": [
+      "Surveillance methods",
+      "Forecasting"
+    ]
   },
   {
-    "objectID": "51-denguebrazil-info.html",
-    "href": "51-denguebrazil-info.html",
-    "title": "Dengue",
+    "objectID": "51-denguebrazil-denguetracker.html",
+    "href": "51-denguebrazil-denguetracker.html",
+    "title": "Dengue tracker",
     "section": "",
-    "text": "Dengue\nDengue is a viral infection that spreads to people through the bite of an infected Aedes species (Aedes aegypti or Aedes albopictus) mosquito. About half of the global population is currently at risk of contracting dengue fever, with an estimated 100 to 400 million infections occurring annually. Dengue is prevalent in tropical and subtropical regions worldwide, primarily in urban and semi-urban areas.\n\n\n\n\nFigure 1: Dengue incidence.\n\n\n\nAlthough many infections of the dengue virus (DENV) do not show symptoms or only result in mild flu-like illness, some cases can be severe and potentially fatal. Dengue fever does not have a specific treatment. Early detection and timely access to proper medical care significantly reduce the fatality rates associated with severe cases. Preventing and controlling dengue transmission relies on managing the the mosquitoes that act as vectors.\n\n\n\n\nFigure 2: Aedes Aegypti\n\n\n\n\n\n\n\nFigure 3: Vector control efforts."
+    "text": "Dengue tracker\nDengue data from surveillance systems is crucial for prevention and control. Unfortunately, this data is often delayed, preventing timely decision-making and resource allocation. In Dengue-tracker, we provide weekly updates on the number of official dengue cases per state in Brazil. Additionally, we present corrected case counts incorporating information from Google trends. We believe these reports will assist policymakers and the general public in understanding dengue levels and guide their decisions.\n\nClick here to access Dengue-tracker\n\n\n\n\n\n\n\n\nFigure 1: Dengue-tracker",
+    "crumbs": [
+      "Dengue in Brazil",
+      "Dengue tracker"
+    ]
   },
   {
     "objectID": "53-denguebrazil-ews.html",
     "href": "53-denguebrazil-ews.html",
     "title": "EWS",
     "section": "",
-    "text": "EWS\nWe are developing a disease surveillance system to forecast the future number of cases and the early detection of disease outbreaks. We are validating the system using dengue data from Brazil.\nSystem components\n\nData retrieval of official dengue data, search query data, population, climate and environmental covariates (download, clean and format data for analysis and visualization)\nNowcasting methods using digital, environmental and climate data. Data include temperature, precipitation, and Google trends using specific keywords related to dengue)\nForecasting methods using environmental and climate data (and ensemble of several methods)\nMethods for monitoring dengue in one municipality, and extension to models that borrow information from neighboring regions\nMethods performance by quantifying how well the methods predict future number of cases weeks or months in advance\nSoftware system to be used to monitor dengue in Brazil, and adaptable to other diseases and countries\nForecasting methods"
+    "text": "EWS\nWe are developing a disease surveillance system to forecast the future number of cases and the early detection of disease outbreaks. We are validating the system using dengue data from Brazil.\nSystem components\n\nData retrieval of official dengue data, search query data, population, climate and environmental covariates (download, clean and format data for analysis and visualization)\nNowcasting methods using digital, environmental and climate data. Data include temperature, precipitation, and Google trends using specific keywords related to dengue)\nForecasting methods using environmental and climate data (and ensemble of several methods)\nMethods for monitoring dengue in one municipality, and extension to models that borrow information from neighboring regions\nMethods performance by quantifying how well the methods predict future number of cases weeks or months in advance\nSoftware system to be used to monitor dengue in Brazil, and adaptable to other diseases and countries\nForecasting methods",
+    "crumbs": [
+      "Dengue in Brazil",
+      "EWS"
+    ]
   },
   {
     "objectID": "99-data.html",
@@ -221,6 +269,6 @@
     "href": "index.html",
     "title": "Welcome to the disease surveillance project!",
     "section": "",
-    "text": "Welcome to the disease surveillance project!\nWe provide tools to national health organizations that allow them to make the best use of their data to improve the health and quality of life of their populations. Our work primarily focus on surveillance of climate-sensitive diseases such as dengue in Brazil and malaria in Africa.\nWe develop innovative statistical and machine learning methods to help understand the geographical spread of diseases and forecast future cases. Our methods leverage multiple datasets from various sources, including temperature, precipitation, and socio-economic factors. Additionally, we use digital data sources to help determine disease levels in real-time.\nOur project aims to be a valuable resource for decision-makers and the general public seeking information on disease levels in various countries. We also provide researchers useful methods and software tools that they can utilize in their efforts to monitor diseases and guide decision-making in their own surveillance applications.\n\n\n\n\n\nFigure 1: #ShowYourStripes."
+    "text": "Welcome to the disease surveillance project!\nWe provide tools to national health organizations that allow them to make the best use of their data to improve the health and quality of life of their populations. Our work primarily focus on surveillance of climate-sensitive diseases such as dengue in Brazil and malaria in Africa.\nWe develop innovative statistical and machine learning methods to help understand the geographical spread of diseases and forecast future cases. Our methods leverage multiple datasets from various sources, including temperature, precipitation, and socio-economic factors. Additionally, we use digital data sources to help determine disease levels in real-time.\nOur project aims to be a valuable resource for decision-makers and the general public seeking information on disease levels in various countries. We also provide researchers useful methods and software tools that they can utilize in their efforts to monitor diseases and guide decision-making in their own surveillance applications.\n\n\n\n\n\n\n\n\nFigure 1: #ShowYourStripes."
   }
 ]
